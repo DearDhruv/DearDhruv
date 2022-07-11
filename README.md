@@ -1,6 +1,6 @@
 ## Heya!
 
-Android Engineer, that's it! Making lives better on @Instagram
+Android Engineer, that's it! Making lives better for Clothing market and Fashion!
 
 ## Have you been here as well?
 
