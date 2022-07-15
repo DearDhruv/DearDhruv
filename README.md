@@ -9,4 +9,5 @@ Android Engineer, that's it! Making lives better for Clothing market and Fashion
 - [Facebook](https://facebook.com/DearDhruv)
 - [LinkedIn](https://linkedin.com/in/DearDhruv)
 
-![States on GitHub](https://github-readme-stats.vercel.app/api?username=deardhruv&show_icons=true&hide_border=true)
+![States on GitHub](https://github-readme-stats.vercel.app/api?username=deardhruv&show_icons=true&hide_border=true&count_private=true)
+
