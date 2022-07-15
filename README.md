@@ -1,12 +1,10 @@
 ## Heya!
 
-Android Engineer, that's it! Making lives better for Clothing market and Fashion!
-
+Lead Android Engineer, Making lives better for Clothing market and Fashion!
 
 ![States on GitHub](https://github-readme-stats.vercel.app/api?username=deardhruv&show_icons=true&hide_border=true&count_private=true&theme=nord)
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=deardhruv&show_icons=true&hide_border=true&count_private=true&theme=nord)
-
 
 ## Have you been here as well?
 
