@@ -13,9 +13,6 @@ Lead Android Engineer with 11+ years of expertise in developing innovative mobil
 - 💬 Ask me about Android or kotlin over [twitter](https://twitter.com/DearDhruv) or above mentioned social media or email, I'd be happy to help.
 
 
-## 🔔 My latest github metrics:
-![Metrics](https://metrics.lecoq.io/deardhruv?template=classic&base=header%2C%20activity%2C%20community%2C%20repositories%2C%20metadata&base.indepth=true&base.hireable=true&base.skip=false&config.timezone=Europe%2FCopenhagen)
-
 ## I like:
 - Anime
 - Astronomy
