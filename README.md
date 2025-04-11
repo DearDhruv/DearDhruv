@@ -1,6 +1,6 @@
 ## Heya!
 
-Lead Android Engineer with 12+ years of expertise in developing innovative mobile applications, seeking a challenging role to drive cutting-edge Android solutions, enhance user experiences, and exceed business objectives. Skilled in collaborating with cross-functional teams and stakeholders to optimize performance and deliver exceptional results in the development of impactful applications.
+Lead Android Engineer with 13+ years of expertise in developing innovative mobile applications, seeking a challenging role to drive cutting-edge Android solutions, enhance user experiences, and exceed business objectives. Skilled in collaborating with cross-functional teams and stakeholders to optimize performance and deliver exceptional results in the development of impactful applications.
 
 ## Have you been here as well?
 - [DearDhruv | X (Twitter)](https://x.com/DearDhruv)
@@ -17,4 +17,3 @@ Lead Android Engineer with 12+ years of expertise in developing innovative mobil
 - Anime
 - Astronomy
 - Chess
-- Recently started looking into Stable Diffusion
