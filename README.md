@@ -1,6 +1,7 @@
 ## Heya!
 
-Lead Android Engineer with 13+ years of expertise in developing innovative mobile applications, seeking a challenging role to drive cutting-edge Android solutions, enhance user experiences, and exceed business objectives. Skilled in collaborating with cross-functional teams and stakeholders to optimize performance and deliver exceptional results in the development of impactful applications.
+Lead Android Engineer with 14+ years of experience building high-quality Android applications, leading teams, and delivering performant, user-centric products across global markets. Specialized in Kotlin, Jetpack Compose, adaptive layouts, and Android architecture patterns, with strong experience in hardware integrations, multimedia editing workflows, and technical speaking at developer conferences.
+
 
 ## Have you been here as well?
 - [DearDhruv | X (Twitter)](https://x.com/DearDhruv)
