@@ -27,9 +27,13 @@ With over **14 years of experience**, I specialize in building high-performance,
 ### 🌐 Connect & Learn
 
 [![Blog](https://img.shields.io/badge/Blog-dhruvs.blog-blue?style=for-the-badge&logo=ghost)](https://dhruvs.blog)
+
 [![X (Twitter)](https://img.shields.io/badge/X-@DearDhruv-black?style=for-the-badge&logo=x)](https://x.com/DearDhruv)
+
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Dhruv_Patel-blue?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/DearDhruv)
+
 [![Instagram](https://img.shields.io/badge/Instagram-@DearDhruv-E4405F?style=for-the-badge&logo=instagram)](https://instagram.com/DearDhruv)
+
 [![Email](https://img.shields.io/badge/Email-dhruv.time@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:dhruv.time@gmail.com)
 
 - 💼 **Freelance:** Open for interesting projects! Reach out via [email](mailto:dhruv.time@gmail.com).
@@ -46,7 +50,9 @@ With over **14 years of experience**, I specialize in building high-performance,
 
 <br/>
 
-![Metrics](https://metrics.lecoq.io/deardhruv?template=classic&base=header%2C%20activity%2C%20community%2C%20repositories%2C%20metadata&base.indepth=true&base.hireable=true&base.skip=false&config.timezone=Europe%2FCopenhagen)
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=deardhruv&theme=nord&hide_border=true&area=true" alt="Dhruv's Activity Graph" />
+</div>
 
 ---
 
