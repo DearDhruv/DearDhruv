@@ -2,7 +2,7 @@
 
 ### Lead Android Engineer | Tech Lead @ IMPACT Commerce 🇩🇰
 
-With over **14 years of experience**, I specialize in building high-performance, user-centric Android applications. My passion lies in pushing the boundaries of the Android platform through modern architecture, adaptive layouts, and deep hardware integrations.
+With over **14 years of experience**, I specialize in building high-performance, user-centric Android applications. Currently leading the mobile engineering efforts for global **Digital Commerce** and **Fashion** brands at IMPACT Commerce.
 
 ---
 
@@ -20,17 +20,15 @@ With over **14 years of experience**, I specialize in building high-performance,
 
 - **Adaptive Layouts:** Preparing apps for Android 17 mandates, ensuring seamless experiences across all form factors.
 - **Multimedia Engine:** Building high-performance video/image editing workflows using Media3.
-- **Technical Speaking:** Frequent speaker at conferences like **Droidcon**, sharing insights on the evolution of Android development.
+- **Technical Speaking:** Frequent speaker at conferences like **Droidcon** and **GDG DevFests**, sharing insights on the evolution of Android development.
 
 ---
 
-### 🌐 Connect & Learn
-
-[![Blog](https://img.shields.io/badge/Blog-dhruvs.blog-blue?style=for-the-badge&logo=ghost)](https://dhruvs.blog)
-
-[![X (Twitter)](https://img.shields.io/badge/X-@DearDhruv-black?style=for-the-badge&logo=x)](https://x.com/DearDhruv)
+### 🌐 Connect & Collaborate
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Dhruv_Patel-blue?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/DearDhruv)
+
+[![X (Twitter)](https://img.shields.io/badge/X-@DearDhruv-black?style=for-the-badge&logo=x)](https://x.com/DearDhruv)
 
 [![Instagram](https://img.shields.io/badge/Instagram-@DearDhruv-E4405F?style=for-the-badge&logo=instagram)](https://instagram.com/DearDhruv)
 
