@@ -43,13 +43,13 @@ With over **14 years of experience**, I specialize in building high-performance,
 ### 📊 GitHub Stats & Metrics
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=deardhruv&show_icons=true&theme=nord&count_private=true" alt="Dhruv's GitHub stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=deardhruv&layout=compact&theme=nord" alt="Top Langs" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=deardhruv&layout=compact&theme=nord" alt="Top Langs" />
+  <img src="https://github-readme-stats.vercel.app/api?username=deardhruv&show_icons=true&theme=nord&count_private=true" alt="Dhruv's GitHub stats" />
 </div>
 
 <br/>
