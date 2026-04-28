@@ -2,7 +2,8 @@
 
 ### Lead Android Engineer | Tech Lead @ IMPACT Commerce 🇩🇰
 
-With over **14 years of experience**, I specialize in building high-performance, user-centric Android applications. Currently leading the mobile engineering efforts for global **Digital Commerce** and **Fashion** brands at IMPACT Commerce.
+With over **14 years of experience**, I specialize in building high-performance, user-centric Android applications. Currently leading the mobile engineering efforts for global **Digital Commerce** and
+**Fashion** brands at IMPACT Commerce.
 
 ---
 
@@ -20,7 +21,7 @@ With over **14 years of experience**, I specialize in building high-performance,
 
 - **Adaptive Layouts:** Preparing apps for Android 17 mandates, ensuring seamless experiences across all form factors.
 - **Multimedia Engine:** Building high-performance video/image editing workflows using Media3.
-- **Technical Speaking:** Frequent speaker at conferences like **Droidcon** and **GDG DevFests**, sharing insights on the evolution of Android development.
+- **Technical Speaking:** Frequent speaker at conferences like **GDG DevFests**, sharing insights on the evolution of Android development.
 
 ---
 
@@ -43,6 +44,11 @@ With over **14 years of experience**, I specialize in building high-performance,
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=deardhruv&show_icons=true&theme=nord&count_private=true" alt="Dhruv's GitHub stats" />
+</div>
+
+<br/>
+
+<div align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=deardhruv&layout=compact&theme=nord" alt="Top Langs" />
 </div>
 
