@@ -4,9 +4,7 @@
 
 ### 📍 Ahmedabad, India 🇮🇳 · Copenhagen, Denmark 🇩🇰
 
-Lead Android Engineer with **14+ years** of experience building scalable Android applications, leading teams, and delivering performant, user-centric products across global markets. Specialized in *
-*Kotlin**, **Jetpack Compose**, **adaptive layouts**, and modern Android architecture — with strong experience in **hardware integrations**, **multimedia editing workflows**, and **technical speaking
-** at developer conferences.
+Lead Android Engineer with **14+ years** of experience building scalable Android applications, leading teams, and delivering performant, user-centric products across global markets. Specialized in **Kotlin**, **Jetpack Compose**, **adaptive layouts**, and modern Android architecture - with strong experience in **hardware integrations**, **multimedia editing workflows**, and **technical speaking** at developer conferences.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Dhruv%20Patel-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/DearDhruv)
 [![X](https://img.shields.io/badge/X-@DearDhruv-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/DearDhruv)
@@ -51,13 +49,13 @@ Lead Android Engineer with **14+ years** of experience building scalable Android
 ![Hilt](https://img.shields.io/badge/Hilt-2C8EBB?style=for-the-badge&logo=dagger&logoColor=white)
 ![Gradle](https://img.shields.io/badge/Gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white)
 
-**Architecture** — Clean Architecture · MVVM · MVI · Modularization
+**Architecture** - Clean Architecture · MVVM · MVI · Modularization
 
 ---
 
 ### 🚀 Featured Side Project
 
-#### 🎮 Veloci Hue — KMP × CMP game for Android & iOS
+#### 🎮 Veloci Hue - KMP × CMP game for Android & iOS
 
 A cross-platform game built with **Kotlin Multiplatform** and **Compose Multiplatform**, sharing UI and logic across mobile platforms.
 
@@ -70,12 +68,12 @@ A cross-platform game built with **Kotlin Multiplatform** and **Compose Multipla
 
 | Year         | Talk                                                                                          | Where               |
 |--------------|-----------------------------------------------------------------------------------------------|---------------------|
-| **Dec 2025** | Jetpack Compose — Game-changing features (Navigation 3, Adaptive, Performance, Accessibility) | Surat 🇮🇳          |
-| **Nov 2025** | Android 17 Mandates — Adaptive Layouts across all form factors                                | Ahmedabad 🇮🇳      |
+| **Dec 2025** | Jetpack Compose - Game-changing features (Navigation 3, Adaptive, Performance, Accessibility) | Surat 🇮🇳          |
+| **Nov 2025** | Android 17 Mandates - Adaptive Layouts across all form factors                                | Ahmedabad 🇮🇳      |
 | **Jun 2022** | What's New in Android 13                                                                      | Gandhinagar 🇮🇳    |
 | **Sep 2019** | UI & UX with Ease for Mobile                                                                  | Surat & Rajkot 🇮🇳 |
-| **Sep 2018** | Android Jetpack — Slices                                                                      | Ahmedabad 🇮🇳      |
-| **Feb 2018** | DialogFlow — Chatbot Creation Workshop                                                        | Anand & Rajkot 🇮🇳 |
+| **Sep 2018** | Android Jetpack - Slices                                                                      | Ahmedabad 🇮🇳      |
+| **Feb 2018** | DialogFlow - Chatbot Creation Workshop                                                        | Anand & Rajkot 🇮🇳 |
 
 ---
 
@@ -89,18 +87,18 @@ A cross-platform game built with **Kotlin Multiplatform** and **Compose Multipla
 
 ### 🤝 Let's Build Something
 
-- 💼 **Freelance / Contract** — Open for interesting Android, KMP, or CMP projects. Reach out via [email](mailto:dhruv.time@gmail.com).
-- 💬 **Ask me anything** — Android architecture, Kotlin, Compose, KMP/CMP, hardware integration, multimedia, or tech leadership — find me on [X](https://x.com/DearDhruv)
+- 💼 **Freelance / Contract** - Open for interesting Android, KMP, or CMP projects. Reach out via [email](mailto:dhruv.time@gmail.com).
+- 💬 **Ask me anything** - Android architecture, Kotlin, Compose, KMP/CMP, hardware integration, multimedia, or tech leadership - find me on [X](https://x.com/DearDhruv)
   or [LinkedIn](https://linkedin.com/in/DearDhruv).
-- 🎤 **Invite me to speak** — Happy to talk at meetups and DevFests on Compose, adaptive layouts, and modern Android.
+- 🎤 **Invite me to speak** - Happy to talk at meetups and DevFests on Compose, adaptive layouts, and modern Android.
 
 ---
 
 ### 🌌 Off the Clock
 
-- 🪐 **Astronomy** — Fascinated by the mysteries of the cosmos.
-- 🎌 **Anime** — Drawn to the art and storytelling of Japanese animation.
-- ♟️ **Chess** — Enjoying the strategic depth of the board.
+- 🪐 **Astronomy** - Fascinated by the mysteries of the cosmos.
+- 🎌 **Anime** - Drawn to the art and storytelling of Japanese animation.
+- ♟️ **Chess** - Enjoying the strategic depth of the board.
 
 ---
 
