@@ -2,7 +2,7 @@
 
 ### 📱 Lead Android Engineer · Tech Lead @ IMPACT Commerce 🇩🇰
 
-Building high-performance, user-centric Android apps for global **Digital Commerce** and **Fashion** brands. **14+ years** shipping mobile software — currently pushing the boundaries of **Jetpack
+Building high-performance, user-centric Android apps for global **Digital Commerce** and **Fashion** brands. **14+ years** shipping mobile software - currently pushing the boundaries of **Jetpack
 Compose**, **Kotlin Multiplatform**, and **Compose Multiplatform**.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Dhruv%20Patel-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/DearDhruv)
@@ -37,21 +37,18 @@ Compose**, **Kotlin Multiplatform**, and **Compose Multiplatform**.
 ![Hilt](https://img.shields.io/badge/Hilt-2C8EBB?style=for-the-badge&logo=dagger&logoColor=white)
 ![Gradle](https://img.shields.io/badge/Gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white)
 
-**Architecture** — Clean Architecture · MVVM · MVI · Modularization
+**Architecture** - Clean Architecture · MVVM · MVI · Modularization
 
-**Testing** — JUnit · MockK · Turbine · Espresso · Compose UI Test
-
-**Delivery** — GitHub Actions · Firebase · Play Console
 
 ---
 
 ### 🎯 What I'm Working On
 
-- **Adaptive Layouts** — Preparing apps for Android 17 mandates; one codebase, every form factor (phones, foldables, tablets, desktop).
-- **Kotlin Multiplatform** — Sharing domain, data, and business logic across targets without compromising native quality.
-- **Compose Multiplatform** — Pushing shared UI from prototype to production for non-Android targets.
-- **Multimedia Engine** — High-performance video and image editing pipelines built on **Media3**.
-- **Tech Speaking** — Regular speaker at **GDG DevFests** on the evolution of Android and modern Kotlin.
+- **Adaptive Layouts** - Preparing apps for Android 17 mandates; one codebase, every form factor (phones, foldables, tablets, desktop).
+- **Kotlin Multiplatform** - Sharing domain, data, and business logic across targets without compromising native quality.
+- **Compose Multiplatform** - Pushing shared UI from prototype to production for non-Android targets.
+- **Multimedia Engine** - High-performance video and image editing pipelines built on **Media3**.
+- **Tech Speaking** - Regular speaker at **GDG DevFests** on the evolution of Android and modern Kotlin.
 
 ---
 
@@ -65,16 +62,16 @@ Compose**, **Kotlin Multiplatform**, and **Compose Multiplatform**.
 
 ### 🤝 Let's Build Something
 
-- 💼 **Freelance** — Open for interesting Android, KMP, or CMP projects. Reach out via [email](mailto:dhruv.time@gmail.com).
-- 💬 **Ask me anything** — Android architecture, Kotlin, Compose, KMP/CMP, or tech leadership — find me on [X](https://x.com/DearDhruv).
+- 💼 **Freelance/Contract** - Open for interesting Android, KMP, or CMP projects. Reach out via [email](mailto:dhruv.time@gmail.com).
+- 💬 **Ask me anything** - Android architecture, Kotlin, Compose, KMP/CMP, or tech leadership - find me on [X](https://x.com/DearDhruv).
 
 ---
 
 ### 🌌 Off the Clock
 
-- 🪐 **Astronomy** — Fascinated by the mysteries of the cosmos.
-- 🎌 **Anime** — Drawn to the art and storytelling of Japanese animation.
-- ♟️ **Chess** — Enjoying the strategic depth of the board.
+- 🪐 **Astronomy** - Fascinated by the mysteries of the cosmos.
+- 🎌 **Anime** - Drawn to the art and storytelling of Japanese animation.
+- ♟️ **Chess** - Enjoying the strategic depth of the board.
 
 ---
 
