@@ -53,7 +53,7 @@ Clean Architecture · MVVM · MVI · Modularization
 </p>
 
 <p align="center">
-  <a href="https://github.com/DearDhruv/Model-Playground">
+  <a href="https://play.google.com/store/apps/details?id=com.deardhruv.llmplayground">
     <img src="./assets/model-playground-showcase.svg" width="100%" alt="Model Playground - Offline-first on-device LLM playground for Android">
   </a>
 </p>

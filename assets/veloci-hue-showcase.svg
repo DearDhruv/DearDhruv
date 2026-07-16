@@ -60,7 +60,7 @@
   <!-- Left Content Column -->
   <g transform="translate(45, 0)">
     <!-- Category -->
-    <text x="0" y="46" class="font-sans text-category">FEATURED SIDE PROJECT</text>
+    <text x="0" y="46" class="font-sans text-category">FEATURED PROJECT</text>
     
     <!-- Title -->
     <text x="0" y="84" class="font-sans text-title">Veloci Hue</text>
