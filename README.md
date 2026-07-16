@@ -82,11 +82,7 @@ Clean Architecture · MVVM · MVI · Modularization
 ## 📊 GitHub at a Glance
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=DearDhruv&show_icons=true&hide_border=true&count_private=true&theme=transparent" alt="DearDhruv GitHub Stats" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=DearDhruv&layout=compact&hide_border=true&theme=transparent" alt="DearDhruv Top Languages" />
+  <img src="https://ghstats.dev/api/card?username=DearDhruv&amp;theme=transparent" alt="DearDhruv GitHub Stats" />
 </p>
 
 <p align="center">
