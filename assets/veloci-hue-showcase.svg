@@ -14,7 +14,7 @@
 
     <linearGradient id="btnGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#FF5252" />
-      <stop offset="100%" stop-color="#7F52FF" />
+      <stop offset="100%" stop-color="#F88909" />
     </linearGradient>
 
     <!-- Drop Shadow for the Card -->

@@ -33,7 +33,7 @@
     /* Light Theme (Default) */
     .card-bg { fill: #ffffff; stroke: #e1e4e8; stroke-width: 1; rx: 16px; }
     .text-title { fill: #1f2328; font-weight: 800; font-size: 32px; }
-    .text-subtitle { fill: #7F52FF; font-weight: 700; font-size: 11px; letter-spacing: 2.5px; }
+    .text-subtitle { fill: #F88909; font-weight: 700; font-size: 11px; letter-spacing: 2.5px; }
     .text-desc { fill: #57606a; font-size: 14px; }
     
     /* Device Mockup Light */
@@ -48,14 +48,14 @@
     /* Tags Light */
     .tag-rect { fill: #f2f4f7; rx: 12px; }
     .tag-text { fill: #484f58; font-weight: 600; font-size: 12px; }
-    .tag-special-rect { fill: rgba(127, 82, 255, 0.08); rx: 12px; stroke: rgba(127, 82, 255, 0.2); stroke-width: 1; }
-    .tag-special-text { fill: #7F52FF; font-weight: 700; font-size: 12px; }
+    .tag-special-rect { fill: rgba(248, 137, 9, 0.08); rx: 12px; stroke: rgba(248, 137, 9, 0.2); stroke-width: 1; }
+    .tag-special-text { fill: #F88909; font-weight: 700; font-size: 12px; }
 
     /* Dark Theme Overrides */
     @media (prefers-color-scheme: dark) {
       .card-bg { fill: #0d1117; stroke: #30363d; }
       .text-title { fill: #f0f6fc; }
-      .text-subtitle { fill: #9e75ff; }
+      .text-subtitle { fill: #FFB74D; }
       .text-desc { fill: #8b949e; }
       
       .device-body { fill: #161b22; stroke: #30363d; }
@@ -66,8 +66,8 @@
       
       .tag-rect { fill: #21262d; }
       .tag-text { fill: #c9d1d9; }
-      .tag-special-rect { fill: rgba(158, 117, 255, 0.15); stroke: rgba(158, 117, 255, 0.3); }
-      .tag-special-text { fill: #a37df9; }
+      .tag-special-rect { fill: rgba(255, 167, 38, 0.15); stroke: rgba(255, 167, 38, 0.3); }
+      .tag-special-text { fill: #FFB74D; }
     }
   </style>
 
