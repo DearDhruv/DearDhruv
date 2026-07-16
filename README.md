@@ -88,7 +88,7 @@ Clean Architecture · MVVM · MVI · Modularization
 <p align="center">
   <img src="https://img.shields.io/github/followers/DearDhruv?style=for-the-badge&logo=github&logoColor=white&color=0e75b6&label=Followers" alt="Followers">
   <img src="https://img.shields.io/github/stars/DearDhruv?affiliations=OWNER&style=for-the-badge&logo=github&logoColor=white&color=FFCA28&label=Stars" alt="Stars">
-  <img src="https://img.shields.io/badge/dynamic/json?style=for-the-badge&logo=github&logoColor=white&color=2C8EBB&label=Public%20Repos&query=%24.public_repos&url=https%3A%2F%2Fapi.github.com%2Fusers%2Fdeardhruv" alt="Public Repos">
+  <img src="https://img.shields.io/badge/Public_Repos-31-2C8EBB?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="Public Repos">
 </p>
 
 <p align="center">
