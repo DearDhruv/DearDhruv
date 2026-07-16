@@ -1,7 +1,9 @@
 # Dhruv Patel · `@DearDhruv`
 
 <p align="center">
-  <img src="./assets/profile-hero.svg" width="100%" alt="Dhruv Patel - Lead Android Engineer / Tech Lead">
+  <a href="https://deardhruv.com" target="_blank">
+    <img src="./assets/profile-hero.svg" width="100%" alt="Dhruv Patel - Lead Android Engineer / Tech Lead">
+  </a>
 </p>
 
 <p align="center">
