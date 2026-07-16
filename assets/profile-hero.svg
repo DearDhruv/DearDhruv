@@ -1,0 +1,196 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 260" width="100%" height="260">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="kotlinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7F52FF" />
+      <stop offset="50%" stop-color="#C711E1" />
+      <stop offset="100%" stop-color="#E2442F" />
+    </linearGradient>
+    <linearGradient id="androidGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3DDC84" />
+      <stop offset="100%" stop-color="#00B0FF" />
+    </linearGradient>
+    <linearGradient id="composeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4285F4" />
+      <stop offset="100%" stop-color="#3DDC84" />
+    </linearGradient>
+    
+    <!-- Drop Shadows -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="8" stdDeviation="6" flood-opacity="0.12" flood-color="#000" />
+    </filter>
+  </defs>
+
+  <style>
+    /* Global Styles */
+    .font-sans {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+    .font-mono {
+      font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace;
+    }
+
+    /* Light Theme (Default) */
+    .card-bg { fill: #ffffff; stroke: #e1e4e8; stroke-width: 1; rx: 16px; }
+    .text-title { fill: #1f2328; font-weight: 800; font-size: 32px; }
+    .text-subtitle { fill: #7F52FF; font-weight: 700; font-size: 11px; letter-spacing: 2.5px; }
+    .text-desc { fill: #57606a; font-size: 14px; }
+    
+    /* Device Mockup Light */
+    .device-body { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 2.5; }
+    .device-screen { fill: #ffffff; stroke: #e1e4e8; stroke-width: 1; }
+    .ui-accent { fill: #eaeef2; }
+    .ui-comp-1 { fill: url(#kotlinGrad); fill-opacity: 0.15; stroke: #7F52FF; stroke-width: 1; }
+    .ui-comp-2 { fill: url(#composeGrad); fill-opacity: 0.15; stroke: #4285F4; stroke-width: 1; }
+    .guide-line { stroke: #00B0FF; stroke-width: 1; stroke-dasharray: 3,3; opacity: 0.6; }
+    .guide-dot { fill: #00B0FF; }
+
+    /* Tags Light */
+    .tag-rect { fill: #f2f4f7; rx: 12px; }
+    .tag-text { fill: #484f58; font-weight: 600; font-size: 12px; }
+    .tag-special-rect { fill: rgba(127, 82, 255, 0.08); rx: 12px; stroke: rgba(127, 82, 255, 0.2); stroke-width: 1; }
+    .tag-special-text { fill: #7F52FF; font-weight: 700; font-size: 12px; }
+
+    /* Dark Theme Overrides */
+    @media (prefers-color-scheme: dark) {
+      .card-bg { fill: #0d1117; stroke: #30363d; }
+      .text-title { fill: #f0f6fc; }
+      .text-subtitle { fill: #9e75ff; }
+      .text-desc { fill: #8b949e; }
+      
+      .device-body { fill: #161b22; stroke: #30363d; }
+      .device-screen { fill: #0d1117; stroke: #21262d; }
+      .ui-accent { fill: #21262d; }
+      .ui-comp-1 { fill: url(#kotlinGrad); fill-opacity: 0.25; }
+      .ui-comp-2 { fill: url(#composeGrad); fill-opacity: 0.25; }
+      
+      .tag-rect { fill: #21262d; }
+      .tag-text { fill: #c9d1d9; }
+      .tag-special-rect { fill: rgba(158, 117, 255, 0.15); stroke: rgba(158, 117, 255, 0.3); }
+      .tag-special-text { fill: #a37df9; }
+    }
+  </style>
+
+  <!-- Background Card -->
+  <rect x="2" y="2" width="796" height="256" class="card-bg" filter="url(#shadow)" />
+
+  <!-- Grid Motif Background (Subtle) -->
+  <g opacity="0.05">
+    <path d="M 0,40 L 800,40 M 0,80 L 800,80 M 0,120 L 800,120 M 0,160 L 800,160 M 0,200 L 800,200 M 0,240 L 800,240" stroke="#888" stroke-width="0.5" />
+    <path d="M 100,0 L 100,260 M 200,0 L 200,260 M 300,0 L 300,260 M 400,0 L 400,260 M 500,0 L 500,260 M 600,0 L 600,260 M 700,0 L 700,260" stroke="#888" stroke-width="0.5" />
+  </g>
+
+  <!-- Left Content Column -->
+  <g transform="translate(45, 0)">
+    <!-- Tech Subtitle -->
+    <text x="0" y="50" class="font-sans text-subtitle">LEAD ANDROID ENGINEER · TECH LEAD</text>
+    
+    <!-- Title -->
+    <text x="0" y="92" class="font-sans text-title">Dhruv Patel</text>
+    
+    <!-- Description -->
+    <text x="0" y="130" class="font-sans text-desc">Specializing in Jetpack Compose, Kotlin Multiplatform (KMP),</text>
+    <text x="0" y="152" class="font-sans text-desc">adaptive design systems, speaker at GDG DevFests.</text>
+
+    <!-- Tag Badges -->
+    <g transform="translate(0, 192)">
+      <!-- Badge 1: 14+ Years -->
+      <g>
+        <rect x="0" y="0" width="105" height="26" class="tag-special-rect" />
+        <text x="52.5" y="17" class="font-sans tag-special-text" text-anchor="middle">⚡ 14+ Years</text>
+      </g>
+      
+      <!-- Badge 2: KMP & Compose -->
+      <g transform="translate(115, 0)">
+        <rect x="0" y="0" width="145" height="26" class="tag-rect" />
+        <text x="72.5" y="17" class="font-sans tag-text" text-anchor="middle">KMP &amp; Compose</text>
+      </g>
+      
+      <!-- Badge 3: Android Artist -->
+      <g transform="translate(270, 0)">
+        <rect x="0" y="0" width="130" height="26" class="tag-rect" />
+        <text x="65" y="17" class="font-mono tag-text" text-anchor="middle">"Android Artist"</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right Content: Adaptive Layouts Showcase -->
+  <!-- 1. Tablet Mockup (Back) -->
+  <g transform="translate(505, 40)">
+    <!-- Device Frame -->
+    <rect x="0" y="0" width="250" height="160" rx="16" class="device-body" />
+    <!-- Device Screen -->
+    <rect x="8" y="8" width="234" height="144" rx="10" class="device-screen" />
+    
+    <!-- Tablet Content (Grid Layout) -->
+    <!-- Sidebar -->
+    <rect x="14" y="14" width="30" height="126" rx="6" class="ui-accent" />
+    <circle cx="29" cy="27" r="4" fill="#7F52FF" />
+    <rect x="21" y="42" width="16" height="4" rx="2" class="ui-accent" opacity="0.8" />
+    <rect x="21" y="54" width="16" height="4" rx="2" class="ui-accent" opacity="0.8" />
+    <rect x="21" y="66" width="16" height="4" rx="2" class="ui-accent" opacity="0.8" />
+
+    <!-- Top Bar -->
+    <rect x="52" y="14" width="180" height="18" rx="4" class="ui-accent" />
+    <circle cx="220" cy="23" r="3" class="ui-accent" opacity="0.5" />
+    
+    <!-- Grid Items (Adaptive) -->
+    <!-- Card 1 -->
+    <rect id="tabCard1" x="52" y="40" width="86" height="46" rx="8" class="ui-comp-1" />
+    <rect x="60" y="48" width="45" height="6" rx="3" fill="#7F52FF" opacity="0.6" />
+    <rect x="60" y="60" width="60" height="4" rx="2" fill="#7F52FF" opacity="0.3" />
+    <rect x="60" y="70" width="30" height="4" rx="2" fill="#7F52FF" opacity="0.3" />
+    
+    <!-- Card 2 -->
+    <rect id="tabCard2" x="148" y="40" width="86" height="46" rx="8" class="ui-comp-2" />
+    <rect x="156" y="48" width="45" height="6" rx="3" fill="#4285F4" opacity="0.6" />
+    <rect x="156" y="60" width="60" height="4" rx="2" fill="#4285F4" opacity="0.3" />
+    
+    <!-- Card 3 -->
+    <rect id="tabCard3" x="52" y="94" width="86" height="42" rx="8" class="ui-accent" />
+    <rect x="148" y="94" width="86" height="42" rx="8" class="ui-accent" />
+  </g>
+
+  <!-- 2. Phone Mockup (Front/Overlay) -->
+  <g transform="translate(445, 70)">
+    <!-- Device Frame -->
+    <rect x="0" y="0" width="95" height="150" rx="18" class="device-body" />
+    <!-- Device Screen -->
+    <rect x="5" y="5" width="85" height="140" rx="14" class="device-screen" />
+    
+    <!-- Phone Content (Vertical List Layout) -->
+    <!-- Top Bar -->
+    <rect x="12" y="12" width="71" height="12" rx="3" class="ui-accent" />
+    
+    <!-- List Items (Adaptive reflow of the tablet grid) -->
+    <!-- Item 1 (corresponds to tabCard1) -->
+    <rect id="phoneCard1" x="12" y="32" width="71" height="32" rx="6" class="ui-comp-1" />
+    <rect x="18" y="40" width="35" height="5" rx="2.5" fill="#7F52FF" opacity="0.6" />
+    <rect x="18" y="50" width="45" height="4" rx="2" fill="#7F52FF" opacity="0.3" />
+    
+    <!-- Item 2 (corresponds to tabCard2) -->
+    <rect id="phoneCard2" x="12" y="72" width="71" height="32" rx="6" class="ui-comp-2" />
+    <rect x="18" y="80" width="35" height="5" rx="2.5" fill="#4285F4" opacity="0.6" />
+    <rect x="18" y="90" width="45" height="4" rx="2" fill="#4285F4" opacity="0.3" />
+    
+    <!-- Item 3 -->
+    <rect id="phoneCard3" x="12" y="112" width="71" height="26" rx="6" class="ui-accent" />
+  </g>
+
+  <!-- 3. Adaptive Guide Indicators (Connecting matching components) -->
+  <g>
+    <!-- Connection 1: Phone Card 1 to Tablet Card 1 -->
+    <!-- Phone card 1 center-right is near (445+83=528, 70+48=118) -->
+    <!-- Tablet card 1 center-left is near (505+52=557, 40+63=103) -->
+    <path d="M 530 118 Q 545 118 557 103" class="guide-line" />
+    <circle cx="530" cy="118" r="2.5" class="guide-dot" />
+    <circle cx="557" cy="103" r="2.5" class="guide-dot" />
+
+    <!-- Connection 2: Phone Card 2 to Tablet Card 2 -->
+    <!-- Phone card 2 center-right is near (445+83=528, 70+88=158) -->
+    <!-- Tablet card 2 center-left is near (505+148=653, 40+63=103) -->
+    <path d="M 530 158 Q 570 170 653 103" class="guide-line" />
+    <circle cx="530" cy="158" r="2.5" class="guide-dot" />
+    <circle cx="653" cy="103" r="2.5" class="guide-dot" />
+  </g>
+</svg>

@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="100%" height="200">
+  <defs>
+    <!-- Blurs and Gradients -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <linearGradient id="aiGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF" />
+      <stop offset="50%" stop-color="#7F52FF" />
+      <stop offset="100%" stop-color="#C711E1" />
+    </linearGradient>
+
+    <!-- Drop Shadow for the Card -->
+    <filter id="shadow" x="-5%" y="-10%" width="110%" height="125%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.08" flood-color="#000" />
+    </filter>
+  </defs>
+
+  <style>
+    /* Global Styles */
+    .font-sans {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+    .font-mono {
+      font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace;
+    }
+
+    /* Light Theme (Default) */
+    .card-bg { fill: #ffffff; stroke: #e1e4e8; stroke-width: 1; rx: 16px; }
+    .text-title { font-weight: 800; font-size: 26px; fill: url(#aiGrad); }
+    .text-category { fill: #7F52FF; font-weight: 700; font-size: 11px; letter-spacing: 2px; }
+    .text-desc { fill: #57606a; font-size: 13.5px; }
+    .display-bg { fill: #eaeef2; rx: 12px; }
+    
+    /* Device Mockup Light */
+    .device-body { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 2; }
+    .device-screen { fill: #ffffff; stroke: #e1e4e8; stroke-width: 1; }
+    
+    /* Badges Light */
+    .store-badge { fill: #24292f; rx: 6px; }
+    .store-text { fill: #ffffff; font-weight: 700; font-size: 11px; }
+
+    /* Dark Theme Overrides */
+    @media (prefers-color-scheme: dark) {
+      .card-bg { fill: #0d1117; stroke: #30363d; }
+      .text-category { fill: #a37df9; }
+      .text-desc { fill: #8b949e; }
+      .display-bg { fill: #161b22; }
+      .device-body { fill: #21262d; stroke: #30363d; }
+      .device-screen { fill: #0d1117; stroke: #21262d; }
+      .store-badge { fill: #21262d; stroke: #30363d; stroke-width: 1; }
+      .store-text { fill: #f0f6fc; }
+    }
+  </style>
+
+  <!-- Background Card -->
+  <rect x="2" y="2" width="796" height="196" class="card-bg" filter="url(#shadow)" />
+
+  <!-- Left Content Column -->
+  <g transform="translate(45, 0)">
+    <!-- Category -->
+    <text x="0" y="46" class="font-sans text-category">FEATURED PROJECT</text>
+    
+    <!-- Title -->
+    <text x="0" y="84" class="font-sans text-title">Model Playground</text>
+    
+    <!-- Description -->
+    <text x="0" y="118" class="font-sans text-desc">An offline-first, on-device LLM playground for Android. Run</text>
+    <text x="0" y="138" class="font-sans text-desc">open-source models (GGUF/llama.cpp) directly on your device.</text>
+
+    <!-- Store Badges -->
+    <g transform="translate(0, 166)">
+      <!-- GitHub Repo Badge -->
+      <g>
+        <rect x="0" y="-12" width="105" height="22" class="store-badge" />
+        <text x="52.5" y="3" class="font-sans store-text" text-anchor="middle">🐙 GitHub Repo</text>
+      </g>
+      <!-- Tech Badge -->
+      <g transform="translate(115, 0)">
+        <rect x="0" y="-12" width="115" height="22" class="store-badge" />
+        <text x="57.5" y="3" class="font-sans store-text" text-anchor="middle">⚡ llama.cpp JNI</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right Content: Interactive AI Playground Visualization -->
+  <g transform="translate(540, 20)">
+    <!-- Simulated Screen Container -->
+    <rect x="0" y="0" width="215" height="160" class="display-bg" />
+    
+    <!-- Neural Network Node Background (Subtle) -->
+    <g stroke="#7F52FF" stroke-width="1" opacity="0.3">
+      <line x1="30" y1="50" x2="80" y2="30" />
+      <line x1="80" y1="30" x2="160" y2="40" />
+      <line x1="30" y1="50" x2="50" y2="110" />
+      <line x1="50" y1="110" x2="110" y2="130" />
+      <line x1="110" y1="130" x2="170" y2="110" />
+      <line x1="160" y1="40" x2="170" y2="110" />
+      <line x1="80" y1="30" x2="110" y2="130" />
+      <line x1="30" y1="50" x2="110" y2="130" />
+    </g>
+    <g fill="#00E5FF" opacity="0.5">
+      <circle cx="30" cy="50" r="4" filter="url(#glow)" />
+      <circle cx="80" cy="30" r="3" />
+      <circle cx="160" cy="40" r="5" fill="#7F52FF" filter="url(#glow)" />
+      <circle cx="50" cy="110" r="3" />
+      <circle cx="110" cy="130" r="4" fill="#C711E1" filter="url(#glow)" />
+      <circle cx="170" cy="110" r="3.5" />
+    </g>
+
+    <!-- Foreground Phone Mockup -->
+    <g transform="translate(65, 12)">
+      <!-- Phone Frame -->
+      <rect x="0" y="0" width="85" height="135" rx="12" class="device-body" />
+      <!-- Phone Screen -->
+      <rect x="4" y="4" width="77" height="127" rx="9" class="device-screen" />
+      
+      <!-- Chat Interface -->
+      <!-- User Bubble 1 -->
+      <rect x="36" y="16" width="35" height="14" rx="4" fill="#00B0FF" opacity="0.8" />
+      <rect x="42" y="21" width="23" height="1.5" rx="0.75" fill="#ffffff" />
+      <rect x="42" y="25" width="15" height="1.5" rx="0.75" fill="#ffffff" />
+      
+      <!-- AI Bubble 1 -->
+      <rect x="6" y="36" width="55" height="24" rx="4" fill="#7F52FF" opacity="0.8" />
+      <rect x="11" y="42" width="45" height="1.5" rx="0.75" fill="#ffffff" />
+      <rect x="11" y="47" width="40" height="1.5" rx="0.75" fill="#ffffff" />
+      <rect x="11" y="52" width="25" height="1.5" rx="0.75" fill="#ffffff" />
+      
+      <!-- User Bubble 2 -->
+      <rect x="30" y="66" width="41" height="14" rx="4" fill="#00B0FF" opacity="0.8" />
+      <rect x="36" y="71" width="29" height="1.5" rx="0.75" fill="#ffffff" />
+      <rect x="36" y="75" width="20" height="1.5" rx="0.75" fill="#ffffff" />
+      
+      <!-- AI Bubble 2 -->
+      <rect x="6" y="86" width="55" height="30" rx="4" fill="#7F52FF" opacity="0.8" />
+      <rect x="11" y="92" width="45" height="1.5" rx="0.75" fill="#ffffff" />
+      <rect x="11" y="97" width="45" height="1.5" rx="0.75" fill="#ffffff" />
+      <rect x="11" y="102" width="35" height="1.5" rx="0.75" fill="#ffffff" />
+      <rect x="11" y="107" width="20" height="1.5" rx="0.75" fill="#ffffff" />
+    </g>
+  </g>
+</svg>
