@@ -1,37 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="100%" height="200">
   <defs>
     <!-- Blurs and Gradients -->
-    <filter id="glow-mp" x="-20%" y="-20%" width="140%" height="140%">
+    <filter id="glow-ai" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="8" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
     
-    <linearGradient id="aiGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="aiTitleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#00E5FF" />
       <stop offset="50%" stop-color="#7F52FF" />
-      <stop offset="100%" stop-color="#C711E1" />
+      <stop offset="100%" stop-color="#E040FB" />
     </linearGradient>
 
-    <linearGradient id="artGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#141E30" />
-      <stop offset="40%" stop-color="#243B55" />
-      <stop offset="70%" stop-color="#7F52FF" />
-      <stop offset="100%" stop-color="#FF5252" />
+    <!-- Diffusion Canvas Gradient -->
+    <linearGradient id="diffusionArtGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="30%" stop-color="#1e1b4b" />
+      <stop offset="65%" stop-color="#581c87" />
+      <stop offset="100%" stop-color="#f43f5e" />
     </linearGradient>
 
-    <linearGradient id="tokenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="tokenStreamGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#00E5FF" />
-      <stop offset="100%" stop-color="#3DDC84" />
+      <stop offset="100%" stop-color="#00E676" />
     </linearGradient>
 
     <!-- Drop Shadow for the Card -->
-    <filter id="shadow-mp" x="-5%" y="-10%" width="110%" height="125%">
+    <filter id="shadow-ai" x="-5%" y="-10%" width="110%" height="125%">
       <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.08" flood-color="#000" />
     </filter>
 
-    <!-- Clip Path for Diffusion Preview -->
-    <clipPath id="mpImgClip">
-      <rect x="0" y="0" width="86" height="52" rx="6" />
+    <!-- Clip Path for Diffusion Artwork -->
+    <clipPath id="diffusionArtClip">
+      <rect x="0" y="0" width="94" height="56" rx="6" />
+    </clipPath>
+
+    <!-- Clip Path for Workstation Window -->
+    <clipPath id="aiWindowClip">
+      <rect x="0" y="0" width="232" height="164" rx="14" />
     </clipPath>
   </defs>
 
@@ -46,16 +52,14 @@
 
     /* Light Theme (Default) */
     .card-bg { fill: #ffffff; stroke: #e1e4e8; stroke-width: 1; rx: 16px; }
-    .text-title { font-weight: 800; font-size: 26px; fill: url(#aiGrad); }
+    .text-title { font-weight: 800; font-size: 26px; fill: url(#aiTitleGrad); }
     .text-category { fill: #F88909; font-weight: 700; font-size: 11px; letter-spacing: 2px; }
     .text-desc { fill: #57606a; font-size: 13.5px; }
-    .display-bg { fill: #f6f8fa; rx: 14px; }
-    
-    /* Device Mockup Light */
-    .device-body { fill: #ffffff; stroke: #d0d7de; stroke-width: 2; }
-    .device-screen { fill: #f6f8fa; stroke: #e1e4e8; stroke-width: 1; }
-    .mockup-status-bg { fill: rgba(127, 82, 255, 0.12); stroke: rgba(127, 82, 255, 0.25); stroke-width: 0.5; rx: 4px; }
-    .mockup-status-text { fill: #5b21b6; font-size: 7.5px; font-weight: 700; }
+    .station-frame { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.5; rx: 14px; }
+    .panel-bg { fill: #ffffff; stroke: #e1e4e8; stroke-width: 1; }
+    .panel-accent { fill: #f0f3f6; }
+    .code-text { fill: #24292f; }
+    .code-muted { fill: #6e7781; }
     
     /* Badges Light */
     .store-badge { fill: #24292f; rx: 6px; }
@@ -68,11 +72,11 @@
       .card-bg { fill: #0d1117; stroke: #30363d; }
       .text-category { fill: #FFA726; }
       .text-desc { fill: #8b949e; }
-      .display-bg { fill: #161b22; }
-      .device-body { fill: #21262d; stroke: #30363d; }
-      .device-screen { fill: #0d1117; stroke: #21262d; }
-      .mockup-status-bg { fill: rgba(167, 139, 250, 0.2); stroke: rgba(167, 139, 250, 0.4); stroke-width: 0.5; }
-      .mockup-status-text { fill: #c4b5fd; }
+      .station-frame { fill: #161b22; stroke: #30363d; }
+      .panel-bg { fill: #0d1117; stroke: #30363d; }
+      .panel-accent { fill: #161b22; }
+      .code-text { fill: #f0f6fc; }
+      .code-muted { fill: #8b949e; }
       .store-badge { fill: #21262d; stroke: #30363d; stroke-width: 1; }
       .store-text { fill: #f0f6fc; }
       .tech-badge { fill: #161b22; stroke: #30363d; stroke-width: 1; }
@@ -81,7 +85,7 @@
   </style>
 
   <!-- Background Card -->
-  <rect x="2" y="2" width="796" height="196" rx="16" class="card-bg" filter="url(#shadow-mp)" />
+  <rect x="2" y="2" width="796" height="196" rx="16" class="card-bg" filter="url(#shadow-ai)" />
 
   <!-- Left Content Column -->
   <g transform="translate(42, 0)">
@@ -89,7 +93,7 @@
     <text x="0" y="44" class="font-sans text-category">FEATURED PROJECT · ON-DEVICE AI</text>
     
     <!-- Title -->
-    <text x="0" y="80" class="font-sans text-title">Model Playground</text>
+    <text x="0" y="80" class="font-sans text-title">AI Playground</text>
     
     <!-- Description with generous line-height -->
     <text x="0" y="114" class="font-sans text-desc">Offline on-device LLM &amp; diffusion image synthesis for Android &amp; iOS.</text>
@@ -120,77 +124,108 @@
     </g>
   </g>
 
-  <!-- Right Content: Dual LLM + Diffusion Studio Mockup -->
-  <g transform="translate(528, 18)">
-    <!-- Canvas Container -->
-    <rect x="0" y="0" width="232" height="164" class="display-bg" />
+  <!-- Right Content: Sleek On-Device AI Dual-Engine Workstation -->
+  <g transform="translate(528, 18)" clip-path="url(#aiWindowClip)">
+    <!-- Container Bezel -->
+    <rect x="0" y="0" width="232" height="164" class="station-frame" />
     
-    <!-- Constellation / Tensor Lines Background -->
-    <g stroke="#7F52FF" stroke-width="0.75" opacity="0.3">
-      <line x1="20" y1="35" x2="65" y2="25" />
-      <line x1="65" y1="25" x2="110" y2="45" />
-      <line x1="20" y1="35" x2="35" y2="90" />
-      <line x1="35" y1="90" x2="80" y2="120" />
-      <line x1="180" y1="30" x2="215" y2="60" />
-      <line x1="195" y1="110" x2="220" y2="140" />
-    </g>
-    <g fill="#00E5FF" opacity="0.6">
-      <circle cx="20" cy="35" r="2.5" filter="url(#glow-mp)" />
-      <circle cx="65" cy="25" r="3" />
-      <circle cx="110" cy="45" r="2" />
-      <circle cx="35" cy="90" r="2.5" />
-      <circle cx="80" cy="120" r="3" fill="#C711E1" />
-      <circle cx="215" cy="60" r="2.5" fill="#3DDC84" />
-      <circle cx="195" cy="110" r="2" />
+    <!-- Subtle Neural Mesh Background -->
+    <g stroke="#7F52FF" stroke-width="0.6" opacity="0.25">
+      <line x1="20" y1="20" x2="70" y2="35" />
+      <line x1="70" y1="35" x2="140" y2="15" />
+      <line x1="140" y1="15" x2="210" y2="40" />
+      <line x1="70" y1="35" x2="100" y2="80" />
+      <line x1="140" y1="15" x2="170" y2="75" />
+      <line x1="170" y1="75" x2="215" y2="120" />
+      <circle cx="20" cy="20" r="1.5" fill="#00E5FF" />
+      <circle cx="70" cy="35" r="2" fill="#7F52FF" />
+      <circle cx="140" cy="15" r="2" fill="#00E5FF" />
+      <circle cx="210" cy="40" r="1.5" fill="#3DDC84" />
+      <circle cx="100" cy="80" r="2" fill="#E040FB" />
+      <circle cx="170" cy="75" r="2" fill="#00E676" />
+      <circle cx="215" cy="120" r="2" fill="#00E5FF" />
     </g>
 
-    <!-- Foreground Smartphone Device Frame -->
-    <g transform="translate(56, 8)">
-      <!-- Phone Shadow/Body -->
-      <rect x="0" y="0" width="118" height="148" rx="14" class="device-body" />
-      <!-- Phone Screen -->
-      <rect x="4" y="4" width="110" height="140" rx="11" class="device-screen" />
+    <!-- 1. LLM Generation Panel (Top Module) -->
+    <g transform="translate(10, 10)">
+      <rect x="0" y="0" width="212" height="66" rx="8" class="panel-bg" />
       
-      <!-- Top Status/Camera Notch -->
-      <rect x="45" y="7" width="20" height="3" rx="1.5" fill="#888888" opacity="0.4" />
-
-      <!-- UI Element 1: Chat Prompt Bubble & LLM Rate -->
-      <g transform="translate(12, 14)">
-        <rect x="0" y="0" width="86" height="15" rx="5" fill="#00B0FF" fill-opacity="0.14" stroke="#00B0FF" stroke-opacity="0.3" stroke-width="0.5" />
-        <circle cx="7" cy="7.5" r="2" fill="#00E5FF" />
-        <rect x="13" y="5" width="34" height="2" rx="1" fill="#00B0FF" />
-        <rect x="13" y="9" width="22" height="1.8" rx="0.9" fill="#00B0FF" fill-opacity="0.6" />
-        <text x="80" y="10" class="font-mono" font-size="6.5" fill="#00B0FF" font-weight="700" text-anchor="end">32 t/s</text>
+      <!-- Panel Header Bar -->
+      <g transform="translate(8, 7)">
+        <!-- Backend Badge -->
+        <rect x="0" y="0" width="98" height="15" rx="4" fill="rgba(0, 176, 255, 0.12)" stroke="#00B0FF" stroke-width="0.5" />
+        <circle cx="6" cy="7.5" r="2" fill="#00E5FF" />
+        <text x="12" y="10.5" class="font-mono" font-size="6.5" font-weight="700" fill="#00B0FF">llama.cpp · Vulkan</text>
+        
+        <!-- Live Token Velocity -->
+        <g transform="translate(196, 0)">
+          <rect x="-62" y="0" width="62" height="15" rx="4" fill="rgba(0, 230, 118, 0.12)" stroke="#00E676" stroke-width="0.5" />
+          <circle cx="-56" cy="7.5" r="2" fill="#00E676" />
+          <text x="-50" y="10.5" class="font-mono" font-size="6.5" font-weight="700" fill="#00C853">42.8 t/s · OFFLINE</text>
+        </g>
       </g>
 
-      <!-- UI Element 2: Generated Image Canvas (Diffusion Preview) -->
-      <g transform="translate(12, 33)" clip-path="url(#mpImgClip)">
-        <rect x="0" y="0" width="86" height="52" fill="url(#artGrad)" />
-        <!-- Nebula / Sun Circle -->
-        <circle cx="60" cy="20" r="10" fill="#FFD740" opacity="0.85" filter="url(#glow-mp)" />
-        <!-- Horizon Hills Layer 1 -->
-        <path d="M 0 38 Q 24 26 48 34 T 86 30 L 86 52 L 0 52 Z" fill="#1e1b4b" opacity="0.7" />
-        <!-- Horizon Hills Layer 2 -->
-        <path d="M 0 44 Q 30 34 58 40 T 86 38 L 86 52 L 0 52 Z" fill="#0f172a" opacity="0.9" />
-        <!-- Sparkle Accent -->
-        <path d="M 18 16 L 20 12 L 22 16 L 26 18 L 22 20 L 20 24 L 18 20 L 14 18 Z" fill="#ffffff" opacity="0.9" />
+      <!-- Active Prompt & Reasoning Stream -->
+      <g transform="translate(8, 28)">
+        <!-- User Prompt Line -->
+        <rect x="0" y="0" width="196" height="14" rx="4" class="panel-accent" />
+        <circle cx="7" cy="7" r="2" fill="#7F52FF" />
+        <text x="14" y="9.5" class="font-mono code-muted" font-size="6.5">prompt: "Synthesize local reactive state"</text>
+
+        <!-- Streamed LLM Token Output with <think> tag -->
+        <g transform="translate(0, 18)">
+          <!-- Thinking chip -->
+          <rect x="0" y="0" width="44" height="12" rx="3" fill="rgba(127, 82, 255, 0.15)" />
+          <text x="4" y="8.5" class="font-mono" font-size="6" font-weight="700" fill="#7F52FF">&lt;think&gt;</text>
+          <!-- Streaming Tokens with Gradient Accent -->
+          <text x="48" y="9" class="font-mono code-text" font-size="6.5" font-weight="600">val localFlow = engine.streamTokens()</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- 2. On-Device Diffusion Panel (Bottom Module) -->
+    <g transform="translate(10, 82)">
+      <rect x="0" y="0" width="212" height="72" rx="8" class="panel-bg" />
+      
+      <!-- Left: Synthesized Artwork Canvas -->
+      <g transform="translate(8, 8)" clip-path="url(#diffusionArtClip)">
+        <rect x="0" y="0" width="94" height="56" fill="url(#diffusionArtGrad)" />
+        
+        <!-- Synthesized Celestial Sun/Aura -->
+        <circle cx="68" cy="18" r="12" fill="#FFD740" opacity="0.9" filter="url(#glow-ai)" />
+        
+        <!-- Neural Hills / Horizons -->
+        <path d="M 0 38 Q 28 26 56 34 T 94 30 L 94 56 L 0 56 Z" fill="#311042" opacity="0.8" />
+        <path d="M 0 44 Q 32 36 64 42 T 94 40 L 94 56 L 0 56 Z" fill="#110726" opacity="0.95" />
+        
+        <!-- Stylized Digital Bonsai Tree Silhouette -->
+        <path d="M 38 48 C 38 42, 34 38, 30 34 C 26 30, 24 24, 28 20 C 32 16, 40 18, 42 24 C 44 20, 52 20, 54 26 C 56 32, 48 38, 44 42 L 44 48 Z" fill="#00E5FF" opacity="0.8" />
+        <circle cx="28" cy="20" r="3.5" fill="#E040FB" opacity="0.85" />
+        <circle cx="42" cy="22" r="4.5" fill="#69F0AE" opacity="0.85" />
+        <circle cx="53" cy="25" r="3.5" fill="#FFD740" opacity="0.85" />
+        
+        <!-- Step Overlay Badge -->
+        <rect x="4" y="4" width="56" height="11" rx="3" fill="rgba(0, 0, 0, 0.65)" />
+        <text x="8" y="11.5" class="font-mono" font-size="5.5" font-weight="700" fill="#69F0AE">Step 4/4 · FLUX</text>
       </g>
 
-      <!-- UI Element 3: Diffusion Model Spec Badge -->
-      <g transform="translate(12, 90)">
-        <rect x="0" y="0" width="86" height="15" class="mockup-status-bg" />
-        <circle cx="7" cy="7.5" r="2" fill="#3DDC84" />
-        <text x="13" y="10" class="font-mono mockup-status-text" font-size="6.5">Bonsai 4B · 4 Steps</text>
-      </g>
-
-      <!-- UI Element 4: Bottom Input Pill with Token Stream -->
-      <g transform="translate(10, 112)">
-        <rect x="0" y="0" width="90" height="20" rx="10" fill="#21262d" opacity="0.1" />
-        <rect x="2" y="2" width="86" height="16" rx="8" class="device-body" stroke-width="0.5" />
-        <circle cx="10" cy="10" r="3" fill="url(#tokenGrad)" />
-        <rect x="18" y="8" width="46" height="2" rx="1" fill="#7F52FF" opacity="0.7" />
-        <rect x="18" y="12" width="24" height="2" rx="1" fill="#00E5FF" opacity="0.5" />
-        <circle cx="78" cy="10" r="4" fill="url(#aiGrad)" />
+      <!-- Right: Diffusion Model Specs & Hardware Badges -->
+      <g transform="translate(110, 8)">
+        <text x="0" y="12" class="font-sans" font-size="9" font-weight="800" fill="url(#tokenStreamGrad)">Bonsai Image 4B</text>
+        <text x="0" y="24" class="font-mono code-muted" font-size="6.5">1.58-bit Ternary DiT</text>
+        
+        <!-- Engine Accents -->
+        <g transform="translate(0, 30)">
+          <!-- Hardware tag -->
+          <rect x="0" y="0" width="94" height="12" rx="3" fill="rgba(127, 82, 255, 0.12)" stroke="#7F52FF" stroke-width="0.5" />
+          <circle cx="5" cy="6" r="1.5" fill="#7F52FF" />
+          <text x="10" y="8.5" class="font-mono" font-size="6" font-weight="700" fill="#7F52FF">LiteRT · Apple MLX</text>
+        </g>
+        
+        <!-- Telemetry: 100% On-Device -->
+        <g transform="translate(0, 45)">
+          <text x="0" y="8" class="font-mono code-muted" font-size="6">🔒 0 KB Telemetry · Zero Cloud</text>
+        </g>
       </g>
     </g>
   </g>
