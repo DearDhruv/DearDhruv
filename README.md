@@ -59,7 +59,7 @@ Clean Architecture · MVI · MVVM · Modularization
 </p>
 
 <p align="center">
-  <a href="https://github.com/DearDhruv/OpenStore">
+  <a href="https://play.google.com/store/apps/details?id=com.deardhruv.openstore">
     <img src="./assets/open-store-showcase.svg" width="100%" alt="Open Store - Lightweight Android TV launcher utility built with Compose for TV">
   </a>
 </p>

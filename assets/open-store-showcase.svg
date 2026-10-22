@@ -92,23 +92,23 @@
 
     <!-- Badges Row -->
     <g transform="translate(0, 166)">
-      <!-- Android TV Only Badge -->
+      <!-- Google Play Badge -->
       <g>
-        <rect x="0" y="-12" width="124" height="22" class="store-badge" />
-        <text x="62" y="3" class="font-sans store-text" text-anchor="middle">📺 Android TV Only</text>
+        <rect x="0" y="-12" width="105" height="22" class="store-badge" />
+        <text x="52.5" y="3" class="font-sans store-text" text-anchor="middle">▶ Google Play</text>
+      </g>
+      <!-- Android TV Only Badge -->
+      <g transform="translate(113, 0)">
+        <rect x="0" y="-12" width="124" height="22" class="tech-badge" />
+        <text x="62" y="3" class="font-sans tech-text" text-anchor="middle">📺 Android TV Only</text>
       </g>
       <!-- Compose for TV Badge -->
-      <g transform="translate(132, 0)">
+      <g transform="translate(245, 0)">
         <rect x="0" y="-12" width="120" height="22" class="tech-badge" />
         <text x="60" y="3" class="font-sans tech-text" text-anchor="middle">⚡ Compose for TV</text>
       </g>
-      <!-- R8 Optimized Badge -->
-      <g transform="translate(260, 0)">
-        <rect x="0" y="-12" width="102" height="22" class="tech-badge" />
-        <text x="51" y="3" class="font-sans tech-text" text-anchor="middle">🛡️ R8 Optimized</text>
-      </g>
       <!-- Release Version Badge -->
-      <g transform="translate(370, 0)">
+      <g transform="translate(373, 0)">
         <rect x="0" y="-12" width="68" height="22" class="tech-badge" />
         <text x="34" y="3" class="font-sans tech-text" text-anchor="middle">🏷️ v1.0.2</text>
       </g>
