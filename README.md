@@ -1,16 +1,16 @@
 # Dhruv Patel · `@DearDhruv`
 
 <p align="center">
-  <a href="https://deardhruv.com" target="_blank">
+  <a href="https://deardhruv.com" target="_blank" rel="noopener noreferrer">
     <img src="./assets/profile-hero.svg" width="100%" alt="Dhruv Patel - Lead Android Engineer / Tech Lead">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://linkedin.com/in/DearDhruv" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-Dhruv%20Patel-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-  <a href="https://x.com/DearDhruv" target="_blank"><img src="https://img.shields.io/badge/X-@DearDhruv-000000?style=for-the-badge&logo=x&logoColor=white" alt="X"></a>
-  <a href="https://instagram.com/DearDhruv" target="_blank"><img src="https://img.shields.io/badge/Instagram-@DearDhruv-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a>
-  <a href="mailto:dhruv.time@gmail.com"><img src="https://img.shields.io/badge/Email-dhruv.time-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
+  <a href="https://linkedin.com/in/DearDhruv" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/LinkedIn-Dhruv%20Patel-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+  <a href="https://x.com/DearDhruv" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/X-@DearDhruv-000000?style=for-the-badge&logo=x&logoColor=white" alt="X"></a>
+  <a href="https://instagram.com/DearDhruv" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Instagram-@DearDhruv-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a>
+  <a href="mailto:dhruv.time@gmail.com" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Email-dhruv.time-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
 </p>
 
 Lead Android Engineer with **almost 15 years** of experience building scalable Android applications, leading teams, and delivering performant, user-centric products across global markets. Specialized in **Kotlin Multiplatform (KMP)**, **Jetpack Compose / Compose for TV**, **on-device AI (LLM & diffusion image synthesis runtimes)**, and **adaptive layouts** across phones, foldables, tablets, and TV screens — with strong expertise in **hardware integrations**, **multimedia pipelines**, and **technical speaking** at developer conferences.
@@ -47,19 +47,19 @@ Clean Architecture · MVI · MVVM · Modularization
 ## 🚀 Featured Projects
 
 <p align="center">
-  <a href="https://play.google.com/store/apps/details?id=com.deardhruv.velocihue" target="_blank">
+  <a href="https://play.google.com/store/apps/details?id=com.deardhruv.velocihue" target="_blank" rel="noopener noreferrer">
     <img src="./assets/veloci-hue-showcase.svg" width="100%" alt="Veloci Hue - KMP × CMP arcade game for Android, iOS & Android TV">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://play.google.com/store/apps/details?id=com.deardhruv.llmplayground" target="_blank">
+  <a href="https://play.google.com/store/apps/details?id=com.deardhruv.llmplayground" target="_blank" rel="noopener noreferrer">
     <img src="./assets/ai-playground-showcase.svg" width="100%" alt="AI Playground - Offline on-device LLM & diffusion image synthesis for Android & iOS">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://play.google.com/store/apps/details?id=com.deardhruv.openstore" target="_blank">
+  <a href="https://play.google.com/store/apps/details?id=com.deardhruv.openstore" target="_blank" rel="noopener noreferrer">
     <img src="./assets/open-store-showcase.svg" width="100%" alt="Open Store - Lightweight Android TV launcher utility built with Compose for TV">
   </a>
 </p>
@@ -101,8 +101,8 @@ Clean Architecture · MVI · MVVM · Modularization
 
 ## 🤝 Let's Build Something
 
-- 💼 **Freelance / Contract** - Open for interesting Android, KMP, or CMP projects. Reach out via [email](mailto:dhruv.time@gmail.com).
-- 💬 **Ask me anything** - Android architecture, Kotlin, Compose, KMP/CMP, hardware integration, multimedia, or tech leadership - find me on [X](https://x.com/DearDhruv) or [LinkedIn](https://linkedin.com/in/DearDhruv).
+- 💼 **Freelance / Contract** - Open for interesting Android, KMP, or CMP projects. Reach out via <a href="mailto:dhruv.time@gmail.com" target="_blank" rel="noopener noreferrer">email</a>.
+- 💬 **Ask me anything** - Android architecture, Kotlin, Compose, KMP/CMP, hardware integration, multimedia, or tech leadership - find me on <a href="https://x.com/DearDhruv" target="_blank" rel="noopener noreferrer">X</a> or <a href="https://linkedin.com/in/DearDhruv" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
 - 🎤 **Invite me to speak** - Happy to talk at meetups and DevFests on Compose, adaptive layouts, and modern Android.
 
 <p align="center">
