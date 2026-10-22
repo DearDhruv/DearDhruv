@@ -13,7 +13,7 @@
   <a href="mailto:dhruv.time@gmail.com"><img src="https://img.shields.io/badge/Email-dhruv.time-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
 </p>
 
-Lead Android Engineer with **14+ years** of experience building scalable Android applications, leading teams, and delivering performant, user-centric products across global markets. Specialized in **Kotlin Multiplatform (KMP)**, **Jetpack Compose / Compose for TV**, **on-device AI (LLM & diffusion image synthesis runtimes)**, and **adaptive layouts** across phones, foldables, tablets, and TV screens — with strong expertise in **hardware integrations**, **multimedia pipelines**, and **technical speaking** at developer conferences.
+Lead Android Engineer with **almost 15 years** of experience building scalable Android applications, leading teams, and delivering performant, user-centric products across global markets. Specialized in **Kotlin Multiplatform (KMP)**, **Jetpack Compose / Compose for TV**, **on-device AI (LLM & diffusion image synthesis runtimes)**, and **adaptive layouts** across phones, foldables, tablets, and TV screens — with strong expertise in **hardware integrations**, **multimedia pipelines**, and **technical speaking** at developer conferences.
 
 <p align="center">
   <img src="./assets/divider.svg" width="100%">
@@ -54,7 +54,7 @@ Clean Architecture · MVI · MVVM · Modularization
 
 <p align="center">
   <a href="https://play.google.com/store/apps/details?id=com.deardhruv.llmplayground" target="_blank">
-    <img src="./assets/model-playground-showcase.svg" width="100%" alt="Model Playground - Offline on-device LLM & diffusion image synthesis for Android & iOS">
+    <img src="./assets/ai-playground-showcase.svg" width="100%" alt="AI Playground - Offline on-device LLM & diffusion image synthesis for Android & iOS">
   </a>
 </p>
 

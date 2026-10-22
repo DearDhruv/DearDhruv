@@ -1,23 +1,62 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 260" width="100%" height="260">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 270" width="100%" height="270">
   <defs>
-    <!-- Gradients -->
+    <!-- Ambient Gradients -->
+    <radialGradient id="ambientViolet" cx="0%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#7F52FF" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#7F52FF" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="ambientEmerald" cx="100%" cy="100%" r="80%">
+      <stop offset="0%" stop-color="#00E676" stop-opacity="0.10" />
+      <stop offset="100%" stop-color="#00E676" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Typography Gradients -->
+    <linearGradient id="heroTitleGradLight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#111827" />
+      <stop offset="60%" stop-color="#312e81" />
+      <stop offset="100%" stop-color="#4338ca" />
+    </linearGradient>
+    <linearGradient id="heroTitleGradDark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="60%" stop-color="#e0e7ff" />
+      <stop offset="100%" stop-color="#a5b4fc" />
+    </linearGradient>
+
+    <!-- Technology Palette Gradients -->
     <linearGradient id="kotlinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#7F52FF" />
       <stop offset="50%" stop-color="#C711E1" />
       <stop offset="100%" stop-color="#E2442F" />
     </linearGradient>
-    <linearGradient id="androidGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#3DDC84" />
-      <stop offset="100%" stop-color="#00B0FF" />
-    </linearGradient>
     <linearGradient id="composeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#4285F4" />
-      <stop offset="100%" stop-color="#3DDC84" />
+      <stop offset="100%" stop-color="#00B0FF" />
     </linearGradient>
-    
+    <linearGradient id="tvFocusRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF" />
+      <stop offset="100%" stop-color="#00E676" />
+    </linearGradient>
+    <linearGradient id="mobileWaveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF" />
+      <stop offset="50%" stop-color="#7F52FF" />
+      <stop offset="100%" stop-color="#00E676" />
+    </linearGradient>
+    <linearGradient id="kmpBridgeGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3DDC84" />
+      <stop offset="50%" stop-color="#7F52FF" />
+      <stop offset="100%" stop-color="#00E5FF" />
+    </linearGradient>
+
     <!-- Drop Shadows -->
-    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="2" dy="8" stdDeviation="6" flood-opacity="0.12" flood-color="#000" />
+    <filter id="heroCardShadow" x="-5%" y="-10%" width="110%" height="125%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-opacity="0.08" flood-color="#000" />
+    </filter>
+    <filter id="mobileLayerShadow" x="-15%" y="-10%" width="130%" height="125%">
+      <feDropShadow dx="-6" dy="10" stdDeviation="8" flood-opacity="0.22" flood-color="#000" />
+    </filter>
+    <filter id="heroGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
   </defs>
 
@@ -32,161 +71,260 @@
 
     /* Light Theme (Default) */
     .card-bg { fill: #ffffff; stroke: #e1e4e8; stroke-width: 1; rx: 16px; }
-    .text-title { fill: #1f2328; font-weight: 800; font-size: 32px; }
-    .text-subtitle { fill: #F88909; font-weight: 700; font-size: 11px; letter-spacing: 2.5px; }
-    .text-desc { fill: #57606a; font-size: 14px; }
+    .text-status { fill: #059669; font-weight: 700; font-size: 10.5px; letter-spacing: 2px; }
+    .status-pill-bg { fill: rgba(16, 185, 129, 0.08); stroke: rgba(16, 185, 129, 0.25); stroke-width: 1; }
+    .text-title { fill: url(#heroTitleGradLight); font-weight: 800; font-size: 32px; }
+    .text-handle { fill: #7F52FF; font-weight: 700; font-size: 13px; }
+    .text-desc { fill: #4b5563; font-size: 13.5px; }
+    .text-desc-sub { fill: #6b7280; font-size: 13px; }
     
-    /* Device Mockup Light */
-    .device-body { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 2.5; }
-    .device-screen { fill: #ffffff; stroke: #e1e4e8; stroke-width: 1; }
-    .ui-accent { fill: #eaeef2; }
-    .ui-comp-1 { fill: url(#kotlinGrad); fill-opacity: 0.15; stroke: #7F52FF; stroke-width: 1; }
-    .ui-comp-2 { fill: url(#composeGrad); fill-opacity: 0.15; stroke: #4285F4; stroke-width: 1; }
-    .guide-line { stroke: #00B0FF; stroke-width: 1; stroke-dasharray: 3,3; opacity: 0.6; fill: none; }
-    .guide-dot { fill: #00B0FF; }
-
-    /* Tags Light */
-    .tag-rect { fill: #f2f4f7; rx: 12px; }
-    .tag-text { fill: #484f58; font-weight: 600; font-size: 12px; }
-    .tag-special-rect { fill: rgba(248, 137, 9, 0.08); rx: 12px; stroke: rgba(248, 137, 9, 0.2); stroke-width: 1; }
-    .tag-special-text { fill: #F88909; font-weight: 700; font-size: 12px; }
+    /* Device Mockups Light */
+    .tv-frame { fill: #f1f5f9; stroke: #cbd5e1; stroke-width: 1.5; }
+    .tv-screen { fill: #0b1120; stroke: #1e293b; stroke-width: 1; }
+    .mobile-frame { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; }
+    .mobile-screen { fill: #f8fafc; stroke: #e2e8f0; stroke-width: 1; }
+    .mobile-sub-card { fill: #ffffff; stroke: #e2e8f0; stroke-width: 0.75; }
+    .mobile-sub-text { fill: #1e293b; }
+    .grid-axis { stroke: #94a3b8; stroke-width: 0.5; opacity: 0.2; }
+    
+    /* Badges Light */
+    .tag-exp-bg { fill: rgba(245, 158, 11, 0.1); stroke: rgba(245, 158, 11, 0.35); stroke-width: 1; }
+    .tag-exp-text { fill: #d97706; font-weight: 700; font-size: 11.5px; }
+    .tag-pill-bg { fill: #f3f4f6; stroke: #e5e7eb; stroke-width: 1; }
+    .tag-pill-text { fill: #374151; font-weight: 600; font-size: 11.5px; }
 
     /* Dark Theme Overrides */
     @media (prefers-color-scheme: dark) {
       .card-bg { fill: #0d1117; stroke: #30363d; }
-      .text-title { fill: #f0f6fc; }
-      .text-subtitle { fill: #FFB74D; }
-      .text-desc { fill: #8b949e; }
+      .text-status { fill: #34d399; }
+      .status-pill-bg { fill: rgba(52, 211, 153, 0.12); stroke: rgba(52, 211, 153, 0.3); }
+      .text-title { fill: url(#heroTitleGradDark); }
+      .text-handle { fill: #c4b5fd; }
+      .text-desc { fill: #9ca3af; }
+      .text-desc-sub { fill: #6b7280; }
       
-      .device-body { fill: #161b22; stroke: #30363d; }
-      .device-screen { fill: #0d1117; stroke: #21262d; }
-      .ui-accent { fill: #21262d; }
-      .ui-comp-1 { fill: url(#kotlinGrad); fill-opacity: 0.25; }
-      .ui-comp-2 { fill: url(#composeGrad); fill-opacity: 0.25; }
+      .tv-frame { fill: #161b22; stroke: #30363d; }
+      .tv-screen { fill: #060913; stroke: #1c2538; }
+      .mobile-frame { fill: #1c2128; stroke: #30363d; }
+      .mobile-screen { fill: #0d1117; stroke: #21262d; }
+      .mobile-sub-card { fill: #161b22; stroke: #30363d; }
+      .mobile-sub-text { fill: #f1f5f9; }
+      .grid-axis { stroke: #334155; opacity: 0.35; }
       
-      .tag-rect { fill: #21262d; }
-      .tag-text { fill: #c9d1d9; }
-      .tag-special-rect { fill: rgba(255, 167, 38, 0.15); stroke: rgba(255, 167, 38, 0.3); }
-      .tag-special-text { fill: #FFB74D; }
+      .tag-exp-bg { fill: rgba(251, 191, 36, 0.12); stroke: rgba(251, 191, 36, 0.35); }
+      .tag-exp-text { fill: #fbbf24; }
+      .tag-pill-bg { fill: #161b22; stroke: #30363d; }
+      .tag-pill-text { fill: #d1d5db; }
     }
   </style>
 
-  <!-- Background Card -->
-  <rect x="2" y="2" width="796" height="256" rx="16" class="card-bg" filter="url(#shadow)" />
+  <!-- Background Base Card -->
+  <rect x="2" y="2" width="796" height="266" rx="16" class="card-bg" filter="url(#heroCardShadow)" />
 
-  <!-- Grid Motif Background (Subtle) -->
-  <g opacity="0.05">
-    <path d="M 0,40 L 800,40 M 0,80 L 800,80 M 0,120 L 800,120 M 0,160 L 800,160 M 0,200 L 800,200 M 0,240 L 800,240" stroke="#888" stroke-width="0.5" />
-    <path d="M 100,0 L 100,260 M 200,0 L 200,260 M 300,0 L 300,260 M 400,0 L 400,260 M 500,0 L 500,260 M 600,0 L 600,260 M 700,0 L 700,260" stroke="#888" stroke-width="0.5" />
+  <!-- Subtle Ambient Corner Light Gradients -->
+  <rect x="2" y="2" width="350" height="200" rx="16" fill="url(#ambientViolet)" />
+  <rect x="450" y="70" width="348" height="198" rx="16" fill="url(#ambientEmerald)" />
+
+  <!-- Delicate Engineering Grid & Coordinates -->
+  <g class="grid-axis">
+    <line x1="44" y1="28" x2="756" y2="28" />
+    <line x1="44" y1="242" x2="756" y2="242" />
+    <line x1="44" y1="28" x2="44" y2="242" />
+    <line x1="756" y1="28" x2="756" y2="242" />
+    <!-- Fine Crosshair Markers -->
+    <path d="M 44 24 V 32 M 40 28 H 48" />
+    <path d="M 756 24 V 32 M 752 28 H 760" />
+    <path d="M 44 238 V 246 M 40 242 H 48" />
+    <path d="M 756 238 V 246 M 752 242 H 760" />
   </g>
 
-  <!-- Left Content Column -->
-  <g transform="translate(45, 0)">
-    <!-- Tech Subtitle -->
-    <text x="0" y="50" class="font-sans text-subtitle">LEAD ANDROID ENGINEER · TECH LEAD</text>
-    
-    <!-- Title -->
-    <text x="0" y="92" class="font-sans text-title">Dhruv Patel</text>
-    
-    <!-- Description -->
-    <text x="0" y="130" class="font-sans text-desc">Specializing in Jetpack Compose, Kotlin Multiplatform,</text>
-    <text x="0" y="152" class="font-sans text-desc">on-device AI runtimes, Android TV &amp; adaptive UI systems.</text>
+  <!-- ======================================================== -->
+  <!-- LEFT COLUMN: Professional Brand & Craft Story              -->
+  <!-- ======================================================== -->
+  <g transform="translate(44, 0)">
+    <!-- Eyebrow Status Pill -->
+    <g transform="translate(0, 42)">
+      <rect x="0" y="-13" width="232" height="22" rx="11" class="status-pill-bg" />
+      <!-- Pulsing Emerald Indicator -->
+      <circle cx="12" cy="-2" r="3.5" fill="#10B981" />
+      <circle cx="12" cy="-2" r="6" fill="#10B981" opacity="0.3" filter="url(#heroGlow)" />
+      <text x="24" y="1.5" class="font-sans text-status">LEAD ANDROID ENGINEER · TECH LEAD</text>
+    </g>
 
-    <!-- Tag Badges -->
-    <g transform="translate(0, 192)">
-      <!-- Badge 1: 14+ Years -->
+    <!-- Main Title & Artist Moniker -->
+    <g transform="translate(0, 88)">
+      <text x="0" y="0" class="font-sans text-title">Dhruv Patel</text>
+      <!-- "Android Artist" Moniker Chip -->
+      <g transform="translate(196, -20)">
+        <rect x="0" y="0" width="112" height="22" rx="11" fill="rgba(127, 82, 255, 0.12)" stroke="#7F52FF" stroke-width="0.75" />
+        <circle cx="10" cy="11" r="2.5" fill="#7F52FF" />
+        <text x="59" y="14.5" class="font-mono text-handle" font-size="10" text-anchor="middle">"Android Artist"</text>
+      </g>
+    </g>
+
+    <!-- Craft & Mission Description with Generous Line-Height -->
+    <g transform="translate(0, 122)">
+      <text x="0" y="0" class="font-sans text-desc">Architecting fluid multiplatform apps, on-device AI runtimes,</text>
+      <text x="0" y="22" class="font-sans text-desc">and adaptive UI systems across Mobile, Foldables &amp; Android TV.</text>
+      <text x="0" y="44" class="font-sans text-desc-sub">15 years of engineering leadership, KMP core craft &amp; GDG DevFest talks.</text>
+    </g>
+
+    <!-- Signature Badges Row -->
+    <g transform="translate(0, 204)">
+      <!-- Badge 1: 15 Years Craft -->
       <g>
-        <rect x="0" y="0" width="102" height="26" rx="12" class="tag-special-rect" />
-        <text x="51" y="17" class="font-sans tag-special-text" text-anchor="middle">⚡ 14+ Years</text>
+        <rect x="0" y="-13" width="126" height="26" rx="13" class="tag-exp-bg" />
+        <text x="63" y="4" class="font-sans tag-exp-text" text-anchor="middle">⚡ ~15 Years Craft</text>
       </g>
       
-      <!-- Badge 2: KMP, Compose & AI -->
-      <g transform="translate(112, 0)">
-        <rect x="0" y="0" width="152" height="26" rx="12" class="tag-rect" />
-        <text x="76" y="17" class="font-sans tag-text" text-anchor="middle">KMP · Compose · AI</text>
+      <!-- Badge 2: Jetpack Compose & KMP -->
+      <g transform="translate(136, 0)">
+        <rect x="0" y="-13" width="168" height="26" rx="13" class="tag-pill-bg" />
+        <text x="84" y="4" class="font-sans tag-pill-text" text-anchor="middle">🎨 Compose &amp; KMP / CMP</text>
       </g>
       
-      <!-- Badge 3: Android Artist -->
-      <g transform="translate(274, 0)">
-        <rect x="0" y="0" width="126" height="26" rx="12" class="tag-rect" />
-        <text x="63" y="17" class="font-mono tag-text" text-anchor="middle">"Android Artist"</text>
+      <!-- Badge 3: On-Device AI & TV -->
+      <g transform="translate(314, 0)">
+        <rect x="0" y="-13" width="128" height="26" rx="13" class="tag-pill-bg" />
+        <text x="64" y="4" class="font-sans tag-pill-text" text-anchor="middle">🧠 On-Device AI · TV</text>
       </g>
     </g>
   </g>
 
-  <!-- Right Content: Adaptive Layouts Showcase -->
-  <!-- 1. Tablet Mockup (Back) -->
-  <g transform="translate(505, 40)">
-    <!-- Device Frame -->
-    <rect x="0" y="0" width="250" height="160" rx="16" class="device-body" />
-    <!-- Device Screen -->
-    <rect x="8" y="8" width="234" height="144" rx="10" class="device-screen" />
-    
-    <!-- Tablet Content (Grid Layout) -->
-    <!-- Sidebar -->
-    <rect x="14" y="14" width="30" height="126" rx="6" class="ui-accent" />
-    <circle cx="29" cy="27" r="4" fill="#7F52FF" />
-    <rect x="21" y="42" width="16" height="4" rx="2" class="ui-accent" opacity="0.8" />
-    <rect x="21" y="54" width="16" height="4" rx="2" class="ui-accent" opacity="0.8" />
-    <rect x="21" y="66" width="16" height="4" rx="2" class="ui-accent" opacity="0.8" />
+  <!-- ======================================================== -->
+  <!-- RIGHT COLUMN: Adaptive Device Ecosystem (TV + Mobile + AI) -->
+  <!-- ======================================================== -->
+  <g transform="translate(470, 24)">
+    <!-- 1. Background Device: Android TV Display (Compose for TV) -->
+    <g transform="translate(40, 10)">
+      <!-- TV Bezel Frame -->
+      <rect x="0" y="0" width="246" height="152" rx="12" class="tv-frame" />
+      <!-- Cinematic OLED Screen -->
+      <rect x="6" y="6" width="234" height="140" rx="8" class="tv-screen" />
+      
+      <!-- TV Screen Navigation Bar -->
+      <g transform="translate(16, 15)">
+        <rect x="0" y="0" width="42" height="10" rx="5" fill="#4285F4" opacity="0.85" />
+        <text x="21" y="7.5" class="font-sans" font-size="6" font-weight="700" fill="#ffffff" text-anchor="middle">FEATURED</text>
+        <rect x="48" y="2" width="24" height="6" rx="3" fill="#334155" opacity="0.6" />
+        <rect x="76" y="2" width="24" height="6" rx="3" fill="#334155" opacity="0.6" />
+        <text x="206" y="8" class="font-mono" font-size="5.5" font-weight="600" fill="#64748b">4K LEANBACK</text>
+      </g>
 
-    <!-- Top Bar -->
-    <rect x="52" y="14" width="180" height="18" rx="4" class="ui-accent" />
-    <circle cx="220" cy="23" r="3" class="ui-accent" opacity="0.5" />
-    
-    <!-- Grid Items (Adaptive) -->
-    <!-- Card 1 -->
-    <rect id="tabCard1" x="52" y="40" width="86" height="46" rx="8" class="ui-comp-1" />
-    <rect x="60" y="48" width="45" height="6" rx="3" fill="#7F52FF" opacity="0.6" />
-    <rect x="60" y="60" width="60" height="4" rx="2" fill="#7F52FF" opacity="0.3" />
-    <rect x="60" y="70" width="30" height="4" rx="2" fill="#7F52FF" opacity="0.3" />
-    
-    <!-- Card 2 -->
-    <rect id="tabCard2" x="148" y="40" width="86" height="46" rx="8" class="ui-comp-2" />
-    <rect x="156" y="48" width="45" height="6" rx="3" fill="#4285F4" opacity="0.6" />
-    <rect x="156" y="60" width="60" height="4" rx="2" fill="#4285F4" opacity="0.3" />
-    
-    <!-- Card 3 -->
-    <rect id="tabCard3" x="52" y="94" width="86" height="42" rx="8" class="ui-accent" />
-    <rect x="148" y="94" width="86" height="42" rx="8" class="ui-accent" />
-  </g>
+      <!-- TV Hero Banner Card -->
+      <g transform="translate(16, 32)">
+        <rect x="0" y="0" width="204" height="42" rx="6" fill="url(#kotlinGrad)" fill-opacity="0.18" stroke="#7F52FF" stroke-width="0.75" />
+        <text x="10" y="15" class="font-sans" font-size="8.5" font-weight="800" fill="#ffffff">Compose for TV</text>
+        <text x="10" y="26" class="font-sans" font-size="6" fill="#94a3b8">10-foot immersive carousel &amp; focus engine</text>
+        <rect x="10" y="30" width="42" height="8" rx="4" fill="#3DDC84" />
+        <text x="31" y="36.5" class="font-sans" font-size="5" font-weight="800" fill="#003314" text-anchor="middle">LAUNCH APP</text>
+      </g>
 
-  <!-- 2. Phone Mockup (Front/Overlay) -->
-  <g transform="translate(445, 70)">
-    <!-- Device Frame -->
-    <rect x="0" y="0" width="95" height="150" rx="18" class="device-body" />
-    <!-- Device Screen -->
-    <rect x="5" y="5" width="85" height="140" rx="14" class="device-screen" />
-    
-    <!-- Phone Content (Vertical List Layout) -->
-    <!-- Top Bar -->
-    <rect x="12" y="12" width="71" height="12" rx="3" class="ui-accent" />
-    
-    <!-- List Items (Adaptive reflow of the tablet grid) -->
-    <!-- Item 1 (corresponds to tabCard1) -->
-    <rect id="phoneCard1" x="12" y="32" width="71" height="32" rx="6" class="ui-comp-1" />
-    <rect x="18" y="40" width="35" height="5" rx="2.5" fill="#7F52FF" opacity="0.6" />
-    <rect x="18" y="50" width="45" height="4" rx="2" fill="#7F52FF" opacity="0.3" />
-    
-    <!-- Item 2 (corresponds to tabCard2) -->
-    <rect id="phoneCard2" x="12" y="72" width="71" height="32" rx="6" class="ui-comp-2" />
-    <rect x="18" y="80" width="35" height="5" rx="2.5" fill="#4285F4" opacity="0.6" />
-    <rect x="18" y="90" width="45" height="4" rx="2" fill="#4285F4" opacity="0.3" />
-    
-    <!-- Item 3 -->
-    <rect id="phoneCard3" x="12" y="112" width="71" height="26" rx="6" class="ui-accent" />
-  </g>
+      <!-- TV App Carousel Shelf -->
+      <g transform="translate(16, 82)">
+        <!-- Tile 1: Active Focused App (Open Store) with Neon Ring -->
+        <g>
+          <rect x="-1" y="-1" width="56" height="50" rx="6" fill="none" stroke="url(#tvFocusRing)" stroke-width="1.75" filter="url(#heroGlow)" />
+          <rect x="0" y="0" width="54" height="48" rx="5" fill="#131c31" stroke="url(#tvFocusRing)" stroke-width="1.5" />
+          <circle cx="27" cy="18" r="8" fill="#00E5FF" opacity="0.2" />
+          <path d="M 23 13 L 33 18 L 23 23 Z" fill="#00E5FF" />
+          <text x="27" y="38" class="font-sans" font-size="6" font-weight="700" fill="#ffffff" text-anchor="middle">Open Store</text>
+        </g>
 
-  <!-- 3. Adaptive Guide Indicators (Connecting matching components) -->
-  <g>
-    <!-- Connection 1: Phone Card 1 to Tablet Card 1 -->
-    <path d="M 528 118 C 538 118 547 103 557 103" fill="none" class="guide-line" />
-    <circle cx="528" cy="118" r="2.5" class="guide-dot" />
-    <circle cx="557" cy="103" r="2.5" class="guide-dot" />
+        <!-- Tile 2: Veloci Hue Tile -->
+        <g transform="translate(62, 0)">
+          <rect x="0" y="0" width="54" height="48" rx="5" fill="#0f172a" stroke="#1e293b" stroke-width="0.75" />
+          <circle cx="27" cy="18" r="8" fill="#FF1744" opacity="0.2" />
+          <circle cx="27" cy="18" r="4.5" fill="#FF1744" />
+          <text x="27" y="38" class="font-sans" font-size="6" fill="#94a3b8" text-anchor="middle">Veloci Hue</text>
+        </g>
 
-    <!-- Connection 2: Phone Card 2 to Tablet Card 2 -->
-    <path d="M 528 158 C 570 178 630 155 653 118" fill="none" class="guide-line" />
-    <circle cx="528" cy="158" r="2.5" class="guide-dot" />
-    <circle cx="653" cy="118" r="2.5" class="guide-dot" />
+        <!-- Tile 3: AI Playground Tile -->
+        <g transform="translate(124, 0)">
+          <rect x="0" y="0" width="54" height="48" rx="5" fill="#0f172a" stroke="#1e293b" stroke-width="0.75" />
+          <circle cx="27" cy="18" r="8" fill="#7F52FF" opacity="0.2" />
+          <text x="27" y="21" class="font-mono" font-size="6.5" font-weight="700" fill="#c4b5fd" text-anchor="middle">AI</text>
+          <text x="27" y="38" class="font-sans" font-size="6" fill="#94a3b8" text-anchor="middle">Playground</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- 2. Foreground Device: Mobile Smartphone (Jetpack Compose & AI) -->
+    <g transform="translate(0, 40)" filter="url(#mobileLayerShadow)">
+      <!-- Phone Outer Chassis -->
+      <rect x="0" y="0" width="114" height="178" rx="18" class="mobile-frame" />
+      <!-- Phone Screen Canvas -->
+      <rect x="4" y="4" width="106" height="170" rx="14" class="mobile-screen" />
+
+      <!-- Top Camera / Speaker Notch -->
+      <rect x="42" y="7" width="22" height="3" rx="1.5" fill="#64748b" opacity="0.4" />
+      
+      <!-- Status Bar Telemetry -->
+      <g transform="translate(10, 14)">
+        <text x="0" y="3" class="font-mono" font-size="5.5" font-weight="700" fill="#64748b">9:41</text>
+        <circle cx="82" cy="1" r="2" fill="#3DDC84" />
+        <rect x="86" y="-1" width="4" height="4" rx="1" fill="#64748b" />
+      </g>
+
+      <!-- Material You Dynamic Tonal Swatches -->
+      <g transform="translate(10, 22)">
+        <rect x="0" y="0" width="14" height="5" rx="2.5" fill="#7F52FF" />
+        <rect x="17" y="0" width="14" height="5" rx="2.5" fill="#00E5FF" />
+        <rect x="34" y="0" width="14" height="5" rx="2.5" fill="#3DDC84" />
+        <rect x="51" y="0" width="14" height="5" rx="2.5" fill="#F59E0B" />
+      </g>
+
+      <!-- Card 1: On-Device AI Streaming Card -->
+      <g transform="translate(8, 32)">
+        <rect x="0" y="0" width="90" height="46" rx="6" fill="rgba(127, 82, 255, 0.1)" stroke="#7F52FF" stroke-width="0.75" />
+        <rect x="6" y="5" width="44" height="9" rx="3" fill="#7F52FF" />
+        <text x="28" y="11.5" class="font-mono" font-size="4.5" font-weight="700" fill="#ffffff" text-anchor="middle">ON-DEVICE AI</text>
+        <text x="84" y="12" class="font-mono" font-size="5" font-weight="700" fill="#00E676" text-anchor="end">42 t/s</text>
+        <!-- Streaming Waveform -->
+        <path d="M 6 27 Q 15 18 24 27 T 42 27 T 60 27 T 78 27" fill="none" stroke="url(#mobileWaveGrad)" stroke-width="1.25" />
+        <text x="6" y="39" class="font-mono" font-size="4.5" fill="#64748b">llama.cpp · Vulkan</text>
+      </g>
+
+      <!-- Card 2: Adaptive Compose UI Card -->
+      <g transform="translate(8, 83)">
+        <rect x="0" y="0" width="90" height="46" rx="6" class="mobile-sub-card" />
+        <rect x="6" y="7" width="36" height="5" rx="2.5" fill="#4285F4" />
+        <rect x="6" y="16" width="56" height="3" rx="1.5" fill="#94a3b8" opacity="0.4" />
+        <rect x="6" y="22" width="42" height="3" rx="1.5" fill="#94a3b8" opacity="0.4" />
+        <!-- KMP State Pill -->
+        <rect x="6" y="30" width="38" height="9" rx="4.5" fill="rgba(61, 220, 132, 0.18)" stroke="#3DDC84" stroke-width="0.5" />
+        <text x="25" y="36.5" class="font-sans" font-size="4.5" font-weight="700" fill="#00C853" text-anchor="middle">KMP SYNC</text>
+      </g>
+
+      <!-- Bottom Navigation Dock -->
+      <g transform="translate(8, 135)">
+        <rect x="0" y="0" width="90" height="18" rx="9" fill="rgba(15, 23, 42, 0.06)" />
+        <circle cx="24" cy="9" r="4" fill="#7F52FF" />
+        <circle cx="45" cy="9" r="3" fill="#94a3b8" opacity="0.5" />
+        <circle cx="66" cy="9" r="3" fill="#94a3b8" opacity="0.5" />
+      </g>
+    </g>
+
+    <!-- 3. Dynamic Connecting Vector Arcs & Floating Tech Nodes -->
+    <g>
+      <!-- KMP State Sync Arc from Mobile to TV -->
+      <path d="M 98 126 C 130 140 145 110 134 94" fill="none" stroke="url(#kmpBridgeGrad)" stroke-width="1.5" stroke-dasharray="3,3" opacity="0.75" />
+      <circle cx="98" cy="126" r="2.5" fill="#3DDC84" />
+      <circle cx="134" cy="94" r="2.5" fill="#00E5FF" />
+
+      <!-- Top Right Floating Tech Node: COMPOSE 3 -->
+      <g transform="translate(200, 2)">
+        <rect x="0" y="0" width="68" height="18" rx="9" fill="rgba(66, 133, 244, 0.12)" stroke="#4285F4" stroke-width="0.75" />
+        <circle cx="8" cy="9" r="2.5" fill="#4285F4" />
+        <text x="14" y="12.5" class="font-mono" font-size="6.5" font-weight="700" fill="#4285F4">COMPOSE 3</text>
+      </g>
+
+      <!-- Bottom Right Floating Tech Node: ADAPTIVE UI -->
+      <g transform="translate(192, 172)">
+        <rect x="0" y="0" width="76" height="18" rx="9" fill="rgba(61, 220, 132, 0.12)" stroke="#3DDC84" stroke-width="0.75" />
+        <circle cx="8" cy="9" r="2.5" fill="#3DDC84" />
+        <text x="14" y="12.5" class="font-mono" font-size="6.5" font-weight="700" fill="#00C853">ADAPTIVE UI</text>
+      </g>
+    </g>
   </g>
 </svg>
