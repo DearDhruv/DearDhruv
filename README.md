@@ -13,7 +13,9 @@
   <a href="mailto:dhruv.time@gmail.com" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Email-dhruv.time-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
 </p>
 
-Lead Android Engineer with **almost 15 years** of experience building scalable Android applications, leading teams, and delivering performant, user-centric products across global markets. Specialized in **Kotlin Multiplatform (KMP)**, **Jetpack Compose / Compose for TV**, **on-device AI (LLM & diffusion image synthesis runtimes)**, and **adaptive layouts** across phones, foldables, tablets, and TV screens — with strong expertise in **hardware integrations**, **multimedia pipelines**, and **technical speaking** at developer conferences.
+Over the past 15 years, I've lived and breathed Android — from the early days of platform fragmentation to modern declarative UI and edge compute. As a Lead Android Engineer and Architect, I build software with a simple philosophy: make it fast, make it resilient, and make it feel effortless.
+
+Today, my craft centers on **Kotlin Multiplatform (KMP)**, **Jetpack Compose across every screen** (phones, foldables, and 10-foot Android TV displays), and running **on-device AI models** directly on mobile silicon. Beyond shipping code, I lead engineering teams, wire low-level hardware and multimedia pipelines, and share battle-tested architecture lessons on stage at **GDG DevFests**.
 
 <p align="center">
   <img src="./assets/divider.svg" width="100%">
