@@ -7,9 +7,9 @@
 </p>
 
 <p align="center">
-  <a href="https://linkedin.com/in/DearDhruv"><img src="https://img.shields.io/badge/LinkedIn-Dhruv%20Patel-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-  <a href="https://x.com/DearDhruv"><img src="https://img.shields.io/badge/X-@DearDhruv-000000?style=for-the-badge&logo=x&logoColor=white" alt="X"></a>
-  <a href="https://instagram.com/DearDhruv"><img src="https://img.shields.io/badge/Instagram-@DearDhruv-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a>
+  <a href="https://linkedin.com/in/DearDhruv" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-Dhruv%20Patel-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+  <a href="https://x.com/DearDhruv" target="_blank"><img src="https://img.shields.io/badge/X-@DearDhruv-000000?style=for-the-badge&logo=x&logoColor=white" alt="X"></a>
+  <a href="https://instagram.com/DearDhruv" target="_blank"><img src="https://img.shields.io/badge/Instagram-@DearDhruv-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a>
   <a href="mailto:dhruv.time@gmail.com"><img src="https://img.shields.io/badge/Email-dhruv.time-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
 </p>
 
@@ -47,19 +47,19 @@ Clean Architecture · MVI · MVVM · Modularization
 ## 🚀 Featured Projects
 
 <p align="center">
-  <a href="https://play.google.com/store/apps/details?id=com.deardhruv.velocihue">
+  <a href="https://play.google.com/store/apps/details?id=com.deardhruv.velocihue" target="_blank">
     <img src="./assets/veloci-hue-showcase.svg" width="100%" alt="Veloci Hue - KMP × CMP arcade game for Android, iOS & Android TV">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://play.google.com/store/apps/details?id=com.deardhruv.llmplayground">
+  <a href="https://play.google.com/store/apps/details?id=com.deardhruv.llmplayground" target="_blank">
     <img src="./assets/model-playground-showcase.svg" width="100%" alt="Model Playground - Offline on-device LLM & diffusion image synthesis for Android & iOS">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://play.google.com/store/apps/details?id=com.deardhruv.openstore">
+  <a href="https://play.google.com/store/apps/details?id=com.deardhruv.openstore" target="_blank">
     <img src="./assets/open-store-showcase.svg" width="100%" alt="Open Store - Lightweight Android TV launcher utility built with Compose for TV">
   </a>
 </p>

@@ -76,7 +76,7 @@
   </style>
 
   <!-- Background Card -->
-  <rect x="2" y="2" width="796" height="196" class="card-bg" filter="url(#shadow-os)" />
+  <rect x="2" y="2" width="796" height="196" rx="16" class="card-bg" filter="url(#shadow-os)" />
 
   <!-- Left Content Column -->
   <g transform="translate(42, 0)">
@@ -94,22 +94,22 @@
     <g transform="translate(0, 166)">
       <!-- Google Play Badge -->
       <g>
-        <rect x="0" y="-12" width="105" height="22" class="store-badge" />
+        <rect x="0" y="-12" width="105" height="22" rx="6" class="store-badge" />
         <text x="52.5" y="3" class="font-sans store-text" text-anchor="middle">▶ Google Play</text>
       </g>
       <!-- Android TV Only Badge -->
       <g transform="translate(113, 0)">
-        <rect x="0" y="-12" width="124" height="22" class="tech-badge" />
+        <rect x="0" y="-12" width="124" height="22" rx="6" class="tech-badge" />
         <text x="62" y="3" class="font-sans tech-text" text-anchor="middle">📺 Android TV Only</text>
       </g>
       <!-- Compose for TV Badge -->
       <g transform="translate(245, 0)">
-        <rect x="0" y="-12" width="120" height="22" class="tech-badge" />
+        <rect x="0" y="-12" width="120" height="22" rx="6" class="tech-badge" />
         <text x="60" y="3" class="font-sans tech-text" text-anchor="middle">⚡ Compose for TV</text>
       </g>
       <!-- Release Version Badge -->
       <g transform="translate(373, 0)">
-        <rect x="0" y="-12" width="68" height="22" class="tech-badge" />
+        <rect x="0" y="-12" width="68" height="22" rx="6" class="tech-badge" />
         <text x="34" y="3" class="font-sans tech-text" text-anchor="middle">🏷️ v1.0.2</text>
       </g>
     </g>

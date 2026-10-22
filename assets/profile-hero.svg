@@ -72,7 +72,7 @@
   </style>
 
   <!-- Background Card -->
-  <rect x="2" y="2" width="796" height="256" class="card-bg" filter="url(#shadow)" />
+  <rect x="2" y="2" width="796" height="256" rx="16" class="card-bg" filter="url(#shadow)" />
 
   <!-- Grid Motif Background (Subtle) -->
   <g opacity="0.05">
@@ -96,19 +96,19 @@
     <g transform="translate(0, 192)">
       <!-- Badge 1: 14+ Years -->
       <g>
-        <rect x="0" y="0" width="102" height="26" class="tag-special-rect" />
+        <rect x="0" y="0" width="102" height="26" rx="12" class="tag-special-rect" />
         <text x="51" y="17" class="font-sans tag-special-text" text-anchor="middle">⚡ 14+ Years</text>
       </g>
       
       <!-- Badge 2: KMP, Compose & AI -->
       <g transform="translate(112, 0)">
-        <rect x="0" y="0" width="152" height="26" class="tag-rect" />
+        <rect x="0" y="0" width="152" height="26" rx="12" class="tag-rect" />
         <text x="76" y="17" class="font-sans tag-text" text-anchor="middle">KMP · Compose · AI</text>
       </g>
       
       <!-- Badge 3: Android Artist -->
       <g transform="translate(274, 0)">
-        <rect x="0" y="0" width="126" height="26" class="tag-rect" />
+        <rect x="0" y="0" width="126" height="26" rx="12" class="tag-rect" />
         <text x="63" y="17" class="font-mono tag-text" text-anchor="middle">"Android Artist"</text>
       </g>
     </g>

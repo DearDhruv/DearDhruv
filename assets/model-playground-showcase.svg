@@ -81,7 +81,7 @@
   </style>
 
   <!-- Background Card -->
-  <rect x="2" y="2" width="796" height="196" class="card-bg" filter="url(#shadow-mp)" />
+  <rect x="2" y="2" width="796" height="196" rx="16" class="card-bg" filter="url(#shadow-mp)" />
 
   <!-- Left Content Column -->
   <g transform="translate(42, 0)">
@@ -99,22 +99,22 @@
     <g transform="translate(0, 166)">
       <!-- Google Play Badge -->
       <g>
-        <rect x="0" y="-12" width="105" height="22" class="store-badge" />
+        <rect x="0" y="-12" width="105" height="22" rx="6" class="store-badge" />
         <text x="52.5" y="3" class="font-sans store-text" text-anchor="middle">▶ Google Play</text>
       </g>
       <!-- KMP × CMP Badge -->
       <g transform="translate(113, 0)">
-        <rect x="0" y="-12" width="92" height="22" class="tech-badge" />
+        <rect x="0" y="-12" width="92" height="22" rx="6" class="tech-badge" />
         <text x="46" y="3" class="font-sans tech-text" text-anchor="middle">⚡ KMP × CMP</text>
       </g>
       <!-- Dual Engine Badge -->
       <g transform="translate(213, 0)">
-        <rect x="0" y="-12" width="140" height="22" class="tech-badge" />
+        <rect x="0" y="-12" width="140" height="22" rx="6" class="tech-badge" />
         <text x="70" y="3" class="font-sans tech-text" text-anchor="middle">🧠 llama.cpp &amp; LiteRT</text>
       </g>
       <!-- MLX Badge -->
       <g transform="translate(361, 0)">
-        <rect x="0" y="-12" width="90" height="22" class="tech-badge" />
+        <rect x="0" y="-12" width="90" height="22" rx="6" class="tech-badge" />
         <text x="45" y="3" class="font-sans tech-text" text-anchor="middle">🍏 MLX Metal</text>
       </g>
     </g>
