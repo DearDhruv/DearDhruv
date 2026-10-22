@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="100%" height="200">
+  <defs>
+    <!-- Blurs and Gradients -->
+    <filter id="glow-os" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <linearGradient id="tvGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#37D5FF" />
+      <stop offset="45%" stop-color="#1468E5" />
+      <stop offset="100%" stop-color="#18D77A" />
+    </linearGradient>
+
+    <linearGradient id="playGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1468E5" />
+      <stop offset="35%" stop-color="#37D5FF" />
+      <stop offset="70%" stop-color="#18D77A" />
+      <stop offset="100%" stop-color="#FDAB2B" />
+    </linearGradient>
+
+    <linearGradient id="focusBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#37D5FF" />
+      <stop offset="100%" stop-color="#18D77A" />
+    </linearGradient>
+
+    <!-- Drop Shadow for the Card -->
+    <filter id="shadow-os" x="-5%" y="-10%" width="110%" height="125%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.08" flood-color="#000" />
+    </filter>
+  </defs>
+
+  <style>
+    /* Global Styles */
+    .font-sans {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+    .font-mono {
+      font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace;
+    }
+
+    /* Light Theme (Default) */
+    .card-bg { fill: #ffffff; stroke: #e1e4e8; stroke-width: 1; rx: 16px; }
+    .text-title { font-weight: 800; font-size: 26px; fill: url(#tvGrad); }
+    .text-category { fill: #1468E5; font-weight: 700; font-size: 11px; letter-spacing: 2px; }
+    .text-desc { fill: #57606a; font-size: 13.5px; }
+    .display-bg { fill: #f6f8fa; rx: 14px; }
+    
+    /* TV Elements Light */
+    .tv-frame { fill: #e1e4e8; stroke: #d0d7de; stroke-width: 1.5; }
+    .tv-screen { fill: #0a0f1d; }
+    .tv-stand { fill: #8c959f; }
+    
+    /* Badges Light */
+    .store-badge { fill: #24292f; rx: 6px; }
+    .store-text { fill: #ffffff; font-weight: 700; font-size: 11px; }
+    .tech-badge { fill: #f2f4f7; stroke: #d0d7de; stroke-width: 1; rx: 6px; }
+    .tech-text { fill: #24292f; font-weight: 600; font-size: 10.5px; }
+
+    /* Dark Theme Overrides */
+    @media (prefers-color-scheme: dark) {
+      .card-bg { fill: #0d1117; stroke: #30363d; }
+      .text-category { fill: #58a6ff; }
+      .text-desc { fill: #8b949e; }
+      .display-bg { fill: #161b22; }
+      .tv-frame { fill: #21262d; stroke: #30363d; }
+      .tv-screen { fill: #060913; }
+      .tv-stand { fill: #484f58; }
+      .store-badge { fill: #21262d; stroke: #30363d; stroke-width: 1; }
+      .store-text { fill: #f0f6fc; }
+      .tech-badge { fill: #161b22; stroke: #30363d; stroke-width: 1; }
+      .tech-text { fill: #c9d1d9; }
+    }
+  </style>
+
+  <!-- Background Card -->
+  <rect x="2" y="2" width="796" height="196" class="card-bg" filter="url(#shadow-os)" />
+
+  <!-- Left Content Column -->
+  <g transform="translate(42, 0)">
+    <!-- Category -->
+    <text x="0" y="44" class="font-sans text-category">FEATURED PROJECT · ANDROID TV</text>
+    
+    <!-- Title -->
+    <text x="0" y="80" class="font-sans text-title">Open Store</text>
+    
+    <!-- Description with generous line-height -->
+    <text x="0" y="114" class="font-sans text-desc">Lightweight Android TV launcher utility built with Compose for TV.</text>
+    <text x="0" y="136" class="font-sans text-desc">Direct 10-foot remote access to Play Store with zero-flicker dark startup.</text>
+
+    <!-- Badges Row -->
+    <g transform="translate(0, 166)">
+      <!-- Android TV Only Badge -->
+      <g>
+        <rect x="0" y="-12" width="124" height="22" class="store-badge" />
+        <text x="62" y="3" class="font-sans store-text" text-anchor="middle">📺 Android TV Only</text>
+      </g>
+      <!-- Compose for TV Badge -->
+      <g transform="translate(132, 0)">
+        <rect x="0" y="-12" width="120" height="22" class="tech-badge" />
+        <text x="60" y="3" class="font-sans tech-text" text-anchor="middle">⚡ Compose for TV</text>
+      </g>
+      <!-- R8 Optimized Badge -->
+      <g transform="translate(260, 0)">
+        <rect x="0" y="-12" width="102" height="22" class="tech-badge" />
+        <text x="51" y="3" class="font-sans tech-text" text-anchor="middle">🛡️ R8 Optimized</text>
+      </g>
+      <!-- Release Version Badge -->
+      <g transform="translate(370, 0)">
+        <rect x="0" y="-12" width="68" height="22" class="tech-badge" />
+        <text x="34" y="3" class="font-sans tech-text" text-anchor="middle">🏷️ v1.0.2</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right Content: 16:9 Android TV Display Mockup -->
+  <g transform="translate(528, 18)">
+    <!-- Container -->
+    <rect x="0" y="0" width="232" height="164" class="display-bg" />
+    
+    <!-- TV Stand Base and Stem -->
+    <rect x="113" y="136" width="6" height="10" rx="1" class="tv-stand" />
+    <rect x="86" y="144" width="60" height="4" rx="2" class="tv-stand" />
+
+    <!-- 16:9 TV Monitor Frame -->
+    <rect x="14" y="10" width="204" height="126" rx="6" class="tv-frame" />
+    <!-- TV Inner Screen (Always-Dark 10-foot Canvas) -->
+    <rect x="18" y="14" width="196" height="118" rx="4" class="tv-screen" />
+
+    <!-- TV Top App Bar -->
+    <g transform="translate(26, 22)">
+      <!-- App Name & Icon -->
+      <circle cx="4" cy="4" r="3.5" fill="#37D5FF" />
+      <text x="12" y="7" class="font-sans" font-size="7.5" font-weight="700" fill="#ffffff" opacity="0.9">Open Store</text>
+      <!-- Clock & Status Glyph -->
+      <text x="174" y="7" class="font-mono" font-size="6.5" fill="#8892b0" text-anchor="end">10:24 PM</text>
+    </g>
+
+    <!-- TV Shelf / Content Cards -->
+    <g transform="translate(26, 36)">
+      <!-- Tile 1: Primary Focused Card (Play Store Shortcut) -->
+      <g>
+        <!-- Focus Glow Effect -->
+        <rect x="-1" y="-1" width="76" height="82" rx="7" fill="none" stroke="url(#focusBorder)" stroke-width="2" filter="url(#glow-os)" opacity="0.8" />
+        <!-- Card Background -->
+        <rect x="0" y="0" width="74" height="80" rx="6" fill="#131C31" />
+        <!-- Play / Launcher Stylized Icon -->
+        <g transform="translate(18, 14)">
+          <!-- Multi-Color Play Vector -->
+          <path d="M 0 0 L 38 22 L 0 44 Z" fill="#1468E5" opacity="0.3" />
+          <path d="M 0 4 L 32 22 L 0 40 Z" fill="url(#playGrad)" />
+          <path d="M 0 4 L 18 22 L 0 40 Z" fill="#37D5FF" opacity="0.8" />
+          <path d="M 18 22 L 32 22 L 0 40 Z" fill="#18D77A" opacity="0.9" />
+          <path d="M 18 22 L 32 22 L 0 4 Z" fill="#FDAB2B" opacity="0.9" />
+        </g>
+        <!-- Tile Label -->
+        <text x="37" y="70" class="font-sans" font-size="7" font-weight="700" fill="#ffffff" text-anchor="middle">Google Play</text>
+      </g>
+
+      <!-- Tile 2: Secondary TV Tile (App Management) -->
+      <g transform="translate(82, 0)">
+        <rect x="0" y="0" width="46" height="80" rx="6" fill="#101726" stroke="#1d263b" stroke-width="0.75" />
+        <!-- Grid Icon -->
+        <g transform="translate(15, 24)" fill="#4285F4" opacity="0.7">
+          <rect x="0" y="0" width="6" height="6" rx="1.5" />
+          <rect x="10" y="0" width="6" height="6" rx="1.5" />
+          <rect x="0" y="10" width="6" height="6" rx="1.5" />
+          <rect x="10" y="10" width="6" height="6" rx="1.5" />
+        </g>
+        <text x="23" y="66" class="font-sans" font-size="6.5" font-weight="600" fill="#8892b0" text-anchor="middle">Apps</text>
+      </g>
+
+      <!-- Tile 3: Secondary TV Tile (Settings & Info) -->
+      <g transform="translate(134, 0)">
+        <rect x="0" y="0" width="44" height="80" rx="6" fill="#101726" stroke="#1d263b" stroke-width="0.75" />
+        <!-- Info/Settings Glyph -->
+        <g transform="translate(15, 24)" stroke="#8892b0" stroke-width="1.5" fill="none">
+          <circle cx="7" cy="7" r="6" />
+          <line x1="7" y1="6" x2="7" y2="10" />
+          <circle cx="7" cy="3.5" r="0.75" fill="#8892b0" />
+        </g>
+        <text x="22" y="66" class="font-sans" font-size="6.5" font-weight="600" fill="#8892b0" text-anchor="middle">About</text>
+      </g>
+    </g>
+
+    <!-- TV 4K/D-pad subtle indicator -->
+    <text x="18" y="156" font-size="8" fill="#888" opacity="0.4" class="font-mono">Leanback · 4K/1080p D-pad</text>
+  </g>
+</svg>
