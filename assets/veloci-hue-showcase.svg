@@ -1,31 +1,48 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="100%" height="200">
   <defs>
     <!-- Blurs and Gradients -->
-    <filter id="glow-vh" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="10" result="blur" />
+    <filter id="glow-vh" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
-    
+
     <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#FF5252" />
       <stop offset="50%" stop-color="#FFD740" />
-      <stop offset="100%" stop-color="#69F0AE" />
+      <stop offset="100%" stop-color="#00E676" />
     </linearGradient>
 
-    <linearGradient id="orbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FF5252" />
-      <stop offset="50%" stop-color="#FFB300" />
-      <stop offset="100%" stop-color="#69F0AE" />
+    <!-- Synthwave Floor Gradient -->
+    <linearGradient id="gridFloorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00E676" stop-opacity="0.02" />
+      <stop offset="100%" stop-color="#00E676" stop-opacity="0.22" />
     </linearGradient>
 
-    <linearGradient id="gateGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#FF5252" stop-opacity="0.8" />
-      <stop offset="100%" stop-color="#FF5252" stop-opacity="0.1" />
+    <!-- Ball Gradient -->
+    <radialGradient id="avatarBallGrad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="35%" stop-color="#69F0AE" />
+      <stop offset="85%" stop-color="#00E676" />
+      <stop offset="100%" stop-color="#00C853" />
+    </radialGradient>
+
+    <!-- Gate Color Gradients -->
+    <linearGradient id="gateRedGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF1744" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#FF5252" />
+      <stop offset="100%" stop-color="#FF1744" stop-opacity="0.6" />
     </linearGradient>
 
-    <linearGradient id="gateGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#69F0AE" stop-opacity="0.8" />
-      <stop offset="100%" stop-color="#69F0AE" stop-opacity="0.1" />
+    <linearGradient id="gateBlueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2979FF" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#00E5FF" />
+      <stop offset="100%" stop-color="#2979FF" stop-opacity="0.6" />
+    </linearGradient>
+
+    <linearGradient id="gateGreenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00C853" stop-opacity="0.7" />
+      <stop offset="50%" stop-color="#69F0AE" />
+      <stop offset="100%" stop-color="#00C853" stop-opacity="0.7" />
     </linearGradient>
 
     <!-- Drop Shadow for the Card -->
@@ -53,10 +70,7 @@
     .text-title { font-weight: 800; font-size: 26px; fill: url(#textGrad); }
     .text-category { fill: #f88909; font-weight: 700; font-size: 11px; letter-spacing: 2px; }
     .text-desc { fill: #57606a; font-size: 13.5px; }
-    .game-bg { fill: #f6f8fa; rx: 14px; }
-    .game-code { fill: #57606a; font-size: 9.5px; font-weight: 600; opacity: 0.9; }
-    .ctrl-pill-bg { fill: rgba(127, 82, 255, 0.12); stroke: rgba(127, 82, 255, 0.3); stroke-width: 0.75; }
-    .ctrl-icon { fill: #7F52FF; }
+    .arcade-bezel { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.5; rx: 14px; }
     
     /* Badges Light */
     .store-badge { fill: #24292f; rx: 6px; }
@@ -69,10 +83,7 @@
       .card-bg { fill: #0d1117; stroke: #30363d; }
       .text-category { fill: #ffb74d; }
       .text-desc { fill: #8b949e; }
-      .game-bg { fill: #161b22; }
-      .game-code { fill: #8b949e; opacity: 0.9; }
-      .ctrl-pill-bg { fill: rgba(167, 139, 250, 0.2); stroke: rgba(167, 139, 250, 0.4); }
-      .ctrl-icon { fill: #c4b5fd; }
+      .arcade-bezel { fill: #161b22; stroke: #30363d; }
       .store-badge { fill: #21262d; stroke: #30363d; stroke-width: 1; }
       .store-text { fill: #f0f6fc; }
       .tech-badge { fill: #161b22; stroke: #30363d; stroke-width: 1; }
@@ -120,42 +131,107 @@
     </g>
   </g>
 
-  <!-- Right Content: Playful visual representation of Veloci Hue -->
+  <!-- Right Content: Authentic Veloci Hue Gameplay Perspective -->
   <g transform="translate(528, 18)" clip-path="url(#vhGameClip)">
-    <!-- Simulated Screen Container -->
-    <rect x="0" y="0" width="232" height="164" class="game-bg" />
+    <!-- Arcade Display Background -->
+    <rect x="0" y="0" width="232" height="164" rx="14" fill="#060913" stroke="#1c2538" stroke-width="1.5" />
     
-    <!-- Speed/Hue Trails (Glow Effect) -->
-    <!-- Violet Trail -->
-    <path d="M 20 86 Q 75 35 130 86 T 215 75" fill="none" stroke="#7F52FF" stroke-width="12" stroke-linecap="round" opacity="0.6" filter="url(#glow-vh)" />
-    <!-- Yellow/Orange Trail -->
-    <path d="M 15 100 Q 85 136 145 76 T 220 106" fill="none" stroke="#FFD740" stroke-width="8" stroke-linecap="round" opacity="0.5" filter="url(#glow-vh)" />
-    <!-- Cyan/Mint Trail -->
-    <path d="M 30 70 Q 95 106 120 56 T 205 116" fill="none" stroke="#00E5FF" stroke-width="6" stroke-linecap="round" opacity="0.45" filter="url(#glow-vh)" />
+    <!-- Synth-Wave Grid Floor -->
+    <rect x="0" y="26" width="232" height="138" fill="url(#gridFloorGrad)" />
     
-    <!-- Dynamic Color Gates (Obstacles) -->
-    <rect x="62" y="16" width="6" height="42" rx="3" fill="url(#gateGrad1)" />
-    <rect x="62" y="106" width="6" height="42" rx="3" fill="url(#gateGrad1)" />
-    <rect x="168" y="16" width="6" height="48" rx="3" fill="url(#gateGrad2)" />
-    <rect x="168" y="112" width="6" height="36" rx="3" fill="url(#gateGrad2)" />
+    <!-- Vanishing Perspective Lines -->
+    <path d="M 116 26 L -30 164 M 116 26 L 25 164 M 116 26 L 75 164 M 116 26 L 116 164 M 116 26 L 157 164 M 116 26 L 207 164 M 116 26 L 262 164" stroke="#00E676" stroke-width="0.75" opacity="0.22" />
+    
+    <!-- Horizontal Perspective Crossbars -->
+    <line x1="0" y1="46" x2="232" y2="46" stroke="#00E676" stroke-width="0.5" opacity="0.14" />
+    <line x1="0" y1="72" x2="232" y2="72" stroke="#00E676" stroke-width="0.6" opacity="0.18" />
+    <line x1="0" y1="106" x2="232" y2="106" stroke="#00E676" stroke-width="0.75" opacity="0.25" />
+    <line x1="0" y1="144" x2="232" y2="144" stroke="#00E676" stroke-width="0.9" opacity="0.32" />
 
-    <!-- Interactive Game Orb (Gradient) -->
-    <circle cx="126" cy="84" r="17" fill="url(#orbGrad)" filter="url(#glow-vh)" />
-    <circle cx="122" cy="80" r="4.5" fill="#ffffff" opacity="0.8" />
-    
-    <!-- TV D-pad Controller Affordance Indicator -->
-    <g transform="translate(186, 16)">
-      <rect x="0" y="0" width="34" height="22" rx="6" class="ctrl-pill-bg" />
-      <!-- Mini D-pad Cross -->
-      <g transform="translate(10, 4)">
-        <rect x="5" y="0" width="4" height="14" rx="1.5" class="ctrl-icon" />
-        <rect x="0" y="5" width="14" height="4" rx="1.5" class="ctrl-icon" />
-        <circle cx="7" cy="7" r="1.5" fill="#ffffff" />
-      </g>
+    <!-- 1. Distant Red Gate (Obstacle with right-side passage opening) -->
+    <g opacity="0.85">
+      <rect x="0" y="44" width="135" height="4" rx="2" fill="url(#gateRedGrad)" filter="url(#glow-vh)" />
+      <line x1="0" y1="46" x2="135" y2="46" stroke="#ffffff" stroke-width="0.75" opacity="0.7" />
+      <rect x="175" y="44" width="57" height="4" rx="2" fill="url(#gateRedGrad)" filter="url(#glow-vh)" />
+      <line x1="175" y1="46" x2="232" y2="46" stroke="#ffffff" stroke-width="0.75" opacity="0.7" />
     </g>
 
-    <!-- Monospace Overlay (Code + Game Sync Theme) -->
-    <text x="14" y="26" class="font-mono game-code">val speed = 120.fps</text>
-    <text x="14" y="148" class="font-mono game-code">leanback.dpad() · sync:v5</text>
+    <!-- 2. Midground Blue Gate (Obstacle with left-center passage opening) -->
+    <g filter="url(#glow-vh)">
+      <rect x="0" y="78" width="62" height="6" rx="3" fill="url(#gateBlueGrad)" />
+      <line x1="0" y1="81" x2="62" y2="81" stroke="#ffffff" stroke-width="1" opacity="0.8" />
+      <rect x="118" y="78" width="114" height="6" rx="3" fill="url(#gateBlueGrad)" />
+      <line x1="118" y1="81" x2="232" y2="81" stroke="#ffffff" stroke-width="1" opacity="0.8" />
+    </g>
+
+    <!-- 3. Collectible 5-Facet Diamond Gem (Floating in open passage) -->
+    <g transform="translate(90, 60)" filter="url(#glow-vh)">
+      <!-- Outer Gem Glow -->
+      <circle cx="0" cy="0" r="8" fill="#00E5FF" opacity="0.3" />
+      <!-- Top Crown Facet -->
+      <polygon points="0,-7 -5,-3 0,-1 5,-3" fill="#00E5FF" />
+      <!-- Left Bottom Facet -->
+      <polygon points="-5,-3 0,7 0,-1" fill="#0091EA" />
+      <!-- Right Bottom Facet -->
+      <polygon points="5,-3 0,7 0,-1" fill="#76FFFF" />
+      <!-- Bright Core -->
+      <circle cx="0" cy="-1" r="1.5" fill="#ffffff" />
+    </g>
+
+    <!-- 4. Foreground Green Gate (Color matched & passing through) -->
+    <g filter="url(#glow-vh)">
+      <!-- Left Gate Segment with opening displacement -->
+      <rect x="-8" y="118" width="74" height="7" rx="3.5" fill="url(#gateGreenGrad)" />
+      <line x1="-8" y1="121.5" x2="66" y2="121.5" stroke="#ffffff" stroke-width="1.2" opacity="0.85" />
+      <!-- Right Gate Segment with opening displacement -->
+      <rect x="164" y="118" width="76" height="7" rx="3.5" fill="url(#gateGreenGrad)" />
+      <line x1="164" y1="121.5" x2="240" y2="121.5" stroke="#ffffff" stroke-width="1.2" opacity="0.85" />
+    </g>
+
+    <!-- 5. Avatar Ball (High Action reflex passing through matched gate) -->
+    <g transform="translate(115, 118)">
+      <!-- Speed Motion Trail / Ghosting behind avatar -->
+      <circle cx="0" cy="14" r="9" fill="#00E676" opacity="0.22" />
+      <circle cx="0" cy="24" r="6" fill="#00E676" opacity="0.1" />
+      <!-- Speed Streaks -->
+      <line x1="-12" y1="2" x2="-12" y2="24" stroke="#69F0AE" stroke-width="1.5" stroke-linecap="round" opacity="0.45" />
+      <line x1="12" y1="2" x2="12" y2="24" stroke="#69F0AE" stroke-width="1.5" stroke-linecap="round" opacity="0.45" />
+      <!-- Outer Neon Glow Blast -->
+      <circle cx="0" cy="0" r="19" fill="#00E676" opacity="0.25" filter="url(#glow-vh)" />
+      <!-- Main Avatar Orb with Radial Gradient -->
+      <circle cx="0" cy="0" r="13" fill="url(#avatarBallGrad)" filter="url(#glow-vh)" />
+      <!-- Specular Highlight -->
+      <circle cx="-3" cy="-3" r="3.2" fill="#ffffff" opacity="0.95" />
+    </g>
+
+    <!-- 6. HUD / Telemetry Overlay -->
+    <!-- Score & Streak -->
+    <g transform="translate(8, 8)">
+      <rect x="0" y="0" width="58" height="15" rx="4" fill="rgba(8, 12, 24, 0.8)" stroke="#1c2538" stroke-width="0.75" />
+      <text x="6" y="10.5" class="font-mono" font-size="7.5" font-weight="700" fill="#00E676">2,480 PTS</text>
+      <text x="2" y="24" class="font-mono" font-size="6.5" font-weight="600" fill="#FFD740">★ 4× STREAK</text>
+    </g>
+
+    <!-- TV D-Pad / Leanback Indicator -->
+    <g transform="translate(168, 8)">
+      <rect x="0" y="0" width="56" height="15" rx="4" fill="rgba(127, 82, 255, 0.22)" stroke="#7F52FF" stroke-width="0.75" />
+      <!-- Mini D-pad Cross -->
+      <g transform="translate(5, 3)">
+        <rect x="3" y="0" width="3" height="9" rx="1" fill="#c4b5fd" />
+        <rect x="0" y="3" width="9" height="3" rx="1" fill="#c4b5fd" />
+      </g>
+      <text x="18" y="10.5" class="font-mono" font-size="6.5" font-weight="700" fill="#c4b5fd">TV D-PAD</text>
+    </g>
+
+    <!-- Bottom HUD Bar -->
+    <g transform="translate(8, 144)">
+      <rect x="0" y="0" width="216" height="14" rx="3" fill="rgba(6, 9, 19, 0.85)" stroke="#1c2538" stroke-width="0.5" />
+      <!-- Heart/Life indicators -->
+      <circle cx="9" cy="7" r="2.5" fill="#FF1744" />
+      <circle cx="17" cy="7" r="2.5" fill="#FF1744" />
+      <circle cx="25" cy="7" r="2.5" fill="#FF1744" />
+      <text x="34" y="9.5" class="font-mono" font-size="6.5" fill="#8b949e">120 FPS</text>
+      <text x="208" y="9.5" class="font-mono" font-size="6.5" font-weight="600" fill="#69F0AE" text-anchor="end">KMP × CMP</text>
+    </g>
   </g>
 </svg>
