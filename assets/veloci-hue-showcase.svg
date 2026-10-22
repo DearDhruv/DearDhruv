@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="100%" height="200">
   <defs>
     <!-- Blurs and Gradients -->
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="12" result="blur" />
+    <filter id="glow-vh" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
     
@@ -12,13 +12,24 @@
       <stop offset="100%" stop-color="#69F0AE" />
     </linearGradient>
 
-    <linearGradient id="btnGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="orbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#FF5252" />
-      <stop offset="100%" stop-color="#F88909" />
+      <stop offset="50%" stop-color="#FFB300" />
+      <stop offset="100%" stop-color="#69F0AE" />
+    </linearGradient>
+
+    <linearGradient id="gateGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF5252" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#FF5252" stop-opacity="0.1" />
+    </linearGradient>
+
+    <linearGradient id="gateGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#69F0AE" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#69F0AE" stop-opacity="0.1" />
     </linearGradient>
 
     <!-- Drop Shadow for the Card -->
-    <filter id="shadow" x="-5%" y="-10%" width="110%" height="125%">
+    <filter id="shadow-vh" x="-5%" y="-10%" width="110%" height="125%">
       <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.08" flood-color="#000" />
     </filter>
   </defs>
@@ -37,11 +48,13 @@
     .text-title { font-weight: 800; font-size: 26px; fill: url(#textGrad); }
     .text-category { fill: #f88909; font-weight: 700; font-size: 11px; letter-spacing: 2px; }
     .text-desc { fill: #57606a; font-size: 13.5px; }
-    .game-bg { fill: #eaeef2; rx: 12px; }
+    .game-bg { fill: #f6f8fa; rx: 14px; }
     
-    /* Play Buttons Light */
+    /* Badges Light */
     .store-badge { fill: #24292f; rx: 6px; }
     .store-text { fill: #ffffff; font-weight: 700; font-size: 11px; }
+    .tech-badge { fill: #f2f4f7; stroke: #d0d7de; stroke-width: 1; rx: 6px; }
+    .tech-text { fill: #24292f; font-weight: 600; font-size: 10.5px; }
 
     /* Dark Theme Overrides */
     @media (prefers-color-scheme: dark) {
@@ -51,58 +64,84 @@
       .game-bg { fill: #161b22; }
       .store-badge { fill: #21262d; stroke: #30363d; stroke-width: 1; }
       .store-text { fill: #f0f6fc; }
+      .tech-badge { fill: #161b22; stroke: #30363d; stroke-width: 1; }
+      .tech-text { fill: #c9d1d9; }
     }
   </style>
 
   <!-- Background Card -->
-  <rect x="2" y="2" width="796" height="196" class="card-bg" filter="url(#shadow)" />
+  <rect x="2" y="2" width="796" height="196" class="card-bg" filter="url(#shadow-vh)" />
 
   <!-- Left Content Column -->
-  <g transform="translate(45, 0)">
+  <g transform="translate(42, 0)">
     <!-- Category -->
-    <text x="0" y="46" class="font-sans text-category">FEATURED PROJECT</text>
+    <text x="0" y="44" class="font-sans text-category">FEATURED PROJECT · KMP ARCADE</text>
     
     <!-- Title -->
-    <text x="0" y="84" class="font-sans text-title">Veloci Hue</text>
+    <text x="0" y="80" class="font-sans text-title">Veloci Hue</text>
     
-    <!-- Description -->
-    <text x="0" y="118" class="font-sans text-desc">A fast-paced, cross-platform color matching game built using</text>
-    <text x="0" y="138" class="font-sans text-desc">Kotlin Multiplatform &amp; Compose Multiplatform for Android &amp; iOS.</text>
+    <!-- Description with generous line-height -->
+    <text x="0" y="114" class="font-sans text-desc">Fast-paced arcade color reflex game built for Mobile &amp; Android TV.</text>
+    <text x="0" y="136" class="font-sans text-desc">KMP &amp; Compose Multiplatform with cloud sync &amp; D-pad Leanback controls.</text>
 
-    <!-- Store Badges -->
+    <!-- Badges Row -->
     <g transform="translate(0, 166)">
       <!-- Google Play Badge -->
       <g>
-        <rect x="0" y="-12" width="110" height="22" class="store-badge" />
-        <text x="55" y="3" class="font-sans store-text" text-anchor="middle">▶ Google Play</text>
+        <rect x="0" y="-12" width="105" height="22" class="store-badge" />
+        <text x="52.5" y="3" class="font-sans store-text" text-anchor="middle">▶ Google Play</text>
       </g>
-      <!-- App Store Badge -->
-      <g transform="translate(120, 0)">
-        <rect x="0" y="-12" width="125" height="22" class="store-badge" />
-        <text x="62.5" y="3" class="font-sans store-text" text-anchor="middle">🍏 App Store (Soon)</text>
+      <!-- Android TV Badge -->
+      <g transform="translate(113, 0)">
+        <rect x="0" y="-12" width="102" height="22" class="tech-badge" />
+        <text x="51" y="3" class="font-sans tech-text" text-anchor="middle">📺 Android TV</text>
+      </g>
+      <!-- KMP × CMP Badge -->
+      <g transform="translate(223, 0)">
+        <rect x="0" y="-12" width="92" height="22" class="tech-badge" />
+        <text x="46" y="3" class="font-sans tech-text" text-anchor="middle">⚡ KMP × CMP</text>
+      </g>
+      <!-- Cloud Sync v5 Badge -->
+      <g transform="translate(323, 0)">
+        <rect x="0" y="-12" width="104" height="22" class="tech-badge" />
+        <text x="52" y="3" class="font-sans tech-text" text-anchor="middle">☁️ Cloud Sync v5</text>
       </g>
     </g>
   </g>
 
   <!-- Right Content: Playful visual representation of Veloci Hue -->
-  <g transform="translate(540, 20)">
+  <g transform="translate(528, 18)">
     <!-- Simulated Screen Container -->
-    <rect x="0" y="0" width="215" height="160" class="game-bg" />
+    <rect x="0" y="0" width="232" height="164" class="game-bg" />
     
     <!-- Speed/Hue Trails (Glow Effect) -->
     <!-- Violet Trail -->
-    <path d="M 20 80 Q 70 30 120 80 T 200 70" fill="none" stroke="#7F52FF" stroke-width="12" stroke-linecap="round" opacity="0.6" filter="url(#glow)" />
+    <path d="M 20 86 Q 75 35 130 86 T 215 75" fill="none" stroke="#7F52FF" stroke-width="12" stroke-linecap="round" opacity="0.6" filter="url(#glow-vh)" />
     <!-- Yellow/Orange Trail -->
-    <path d="M 15 95 Q 80 130 135 70 T 205 100" fill="none" stroke="#FFD740" stroke-width="8" stroke-linecap="round" opacity="0.5" filter="url(#glow)" />
+    <path d="M 15 100 Q 85 136 145 76 T 220 106" fill="none" stroke="#FFD740" stroke-width="8" stroke-linecap="round" opacity="0.5" filter="url(#glow-vh)" />
     <!-- Cyan/Mint Trail -->
-    <path d="M 30 65 Q 90 100 110 50 T 190 110" fill="none" stroke="#00E5FF" stroke-width="6" stroke-linecap="round" opacity="0.4" filter="url(#glow)" />
+    <path d="M 30 70 Q 95 106 120 56 T 205 116" fill="none" stroke="#00E5FF" stroke-width="6" stroke-linecap="round" opacity="0.45" filter="url(#glow-vh)" />
     
+    <!-- Dynamic Color Gates (Obstacles) -->
+    <rect x="62" y="16" width="6" height="42" rx="3" fill="url(#gateGrad1)" />
+    <rect x="62" y="106" width="6" height="42" rx="3" fill="url(#gateGrad1)" />
+    <rect x="175" y="16" width="6" height="48" rx="3" fill="url(#gateGrad2)" />
+    <rect x="175" y="112" width="6" height="36" rx="3" fill="url(#gateGrad2)" />
+
     <!-- Interactive Game Orb (Gradient) -->
-    <circle cx="120" cy="80" r="16" fill="url(#btnGrad)" filter="url(#glow)" />
-    <circle cx="116" cy="76" r="4" fill="#ffffff" opacity="0.6" />
+    <circle cx="126" cy="84" r="17" fill="url(#orbGrad)" filter="url(#glow-vh)" />
+    <circle cx="122" cy="80" r="4.5" fill="#ffffff" opacity="0.8" />
     
+    <!-- TV D-pad Controller Affordance Indicator -->
+    <g transform="translate(182, 22)" opacity="0.45">
+      <!-- Mini D-pad Cross -->
+      <rect x="6" y="0" width="6" height="18" rx="2" fill="#888" />
+      <rect x="0" y="6" width="18" height="6" rx="2" fill="#888" />
+      <circle cx="9" cy="9" r="2" fill="#fff" />
+    </g>
+
     <!-- Monospace Overlay (Code + Game Sync Theme) -->
-    <text x="14" y="26" font-size="10" fill="#888" opacity="0.4" class="font-mono">val speed = 250.fps</text>
-    <text x="14" y="144" font-size="10" fill="#888" opacity="0.4" class="font-mono">hue.colorflow()</text>
+    <text x="14" y="26" font-size="9.5" fill="#888" opacity="0.45" class="font-mono">val speed = 120.fps</text>
+    <text x="14" y="148" font-size="9.5" fill="#888" opacity="0.45" class="font-mono">leanback.dpad() · sync:v5</text>
   </g>
 </svg>
