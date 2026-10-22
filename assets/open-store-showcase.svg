@@ -50,6 +50,7 @@
     .tv-frame { fill: #e1e4e8; stroke: #d0d7de; stroke-width: 1.5; }
     .tv-screen { fill: #0a0f1d; }
     .tv-stand { fill: #8c959f; }
+    .tv-code { fill: #57606a; font-size: 8.5px; font-weight: 600; opacity: 0.9; }
     
     /* Badges Light */
     .store-badge { fill: #24292f; rx: 6px; }
@@ -66,6 +67,7 @@
       .tv-frame { fill: #21262d; stroke: #30363d; }
       .tv-screen { fill: #060913; }
       .tv-stand { fill: #484f58; }
+      .tv-code { fill: #8b949e; opacity: 0.9; }
       .store-badge { fill: #21262d; stroke: #30363d; stroke-width: 1; }
       .store-text { fill: #f0f6fc; }
       .tech-badge { fill: #161b22; stroke: #30363d; stroke-width: 1; }
@@ -86,7 +88,7 @@
     
     <!-- Description with generous line-height -->
     <text x="0" y="114" class="font-sans text-desc">Lightweight Android TV launcher utility built with Compose for TV.</text>
-    <text x="0" y="136" class="font-sans text-desc">Direct 10-foot remote access to Play Store with zero-flicker dark startup.</text>
+    <text x="0" y="136" class="font-sans text-desc">Direct 10-foot remote access to Play Store with instant dark startup.</text>
 
     <!-- Badges Row -->
     <g transform="translate(0, 166)">
@@ -184,6 +186,6 @@
     </g>
 
     <!-- TV 4K/D-pad subtle indicator -->
-    <text x="18" y="156" font-size="8" fill="#888" opacity="0.4" class="font-mono">Leanback · 4K/1080p D-pad</text>
+    <text x="18" y="156" class="font-mono tv-code">Leanback · 4K/1080p D-pad</text>
   </g>
 </svg>
