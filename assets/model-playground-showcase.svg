@@ -28,6 +28,11 @@
     <filter id="shadow-mp" x="-5%" y="-10%" width="110%" height="125%">
       <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.08" flood-color="#000" />
     </filter>
+
+    <!-- Clip Path for Diffusion Preview -->
+    <clipPath id="mpImgClip">
+      <rect x="0" y="0" width="86" height="52" rx="6" />
+    </clipPath>
   </defs>
 
   <style>
@@ -49,6 +54,8 @@
     /* Device Mockup Light */
     .device-body { fill: #ffffff; stroke: #d0d7de; stroke-width: 2; }
     .device-screen { fill: #f6f8fa; stroke: #e1e4e8; stroke-width: 1; }
+    .mockup-status-bg { fill: rgba(127, 82, 255, 0.12); stroke: rgba(127, 82, 255, 0.25); stroke-width: 0.5; rx: 4px; }
+    .mockup-status-text { fill: #5b21b6; font-size: 7.5px; font-weight: 700; }
     
     /* Badges Light */
     .store-badge { fill: #24292f; rx: 6px; }
@@ -64,6 +71,8 @@
       .display-bg { fill: #161b22; }
       .device-body { fill: #21262d; stroke: #30363d; }
       .device-screen { fill: #0d1117; stroke: #21262d; }
+      .mockup-status-bg { fill: rgba(167, 139, 250, 0.2); stroke: rgba(167, 139, 250, 0.4); stroke-width: 0.5; }
+      .mockup-status-text { fill: #c4b5fd; }
       .store-badge { fill: #21262d; stroke: #30363d; stroke-width: 1; }
       .store-text { fill: #f0f6fc; }
       .tech-badge { fill: #161b22; stroke: #30363d; stroke-width: 1; }
@@ -145,32 +154,37 @@
       <!-- Top Status/Camera Notch -->
       <rect x="45" y="7" width="20" height="3" rx="1.5" fill="#888888" opacity="0.4" />
 
-      <!-- UI Element 1: Chat Prompt Bubble -->
-      <rect x="12" y="15" width="86" height="15" rx="5" fill="#00B0FF" opacity="0.18" />
-      <rect x="18" y="20" width="52" height="2.5" rx="1.25" fill="#00B0FF" />
-      <rect x="18" y="24" width="30" height="2" rx="1" fill="#00B0FF" opacity="0.6" />
-
-      <!-- UI Element 2: Generated Image Canvas (Diffusion Preview) -->
-      <g transform="translate(12, 34)">
-        <rect x="0" y="0" width="86" height="52" rx="6" fill="url(#artGrad)" />
-        <!-- Nebula / Sun Circle -->
-        <circle cx="60" cy="22" r="10" fill="#FFD740" opacity="0.8" filter="url(#glow-mp)" />
-        <!-- Horizon Hills -->
-        <path d="M 0 42 Q 22 28 44 38 T 86 34 L 86 52 L 0 52 Z" fill="#0f172a" opacity="0.85" />
-        <path d="M 15 45 Q 40 33 65 42 T 86 40 L 86 52 L 15 52 Z" fill="#1e1b4b" opacity="0.6" />
-        <!-- Sparkle Accent -->
-        <path d="M 18 16 L 20 12 L 22 16 L 26 18 L 22 20 L 20 24 L 18 20 L 14 18 Z" fill="#ffffff" opacity="0.85" />
+      <!-- UI Element 1: Chat Prompt Bubble & LLM Rate -->
+      <g transform="translate(12, 14)">
+        <rect x="0" y="0" width="86" height="15" rx="5" fill="#00B0FF" fill-opacity="0.14" stroke="#00B0FF" stroke-opacity="0.3" stroke-width="0.5" />
+        <circle cx="7" cy="7.5" r="2" fill="#00E5FF" />
+        <rect x="13" y="5" width="34" height="2" rx="1" fill="#00B0FF" />
+        <rect x="13" y="9" width="22" height="1.8" rx="0.9" fill="#00B0FF" fill-opacity="0.6" />
+        <text x="80" y="10" class="font-mono" font-size="6.5" fill="#00B0FF" font-weight="700" text-anchor="end">32 t/s</text>
       </g>
 
-      <!-- UI Element 3: Dual Engine Speed Badge -->
-      <g transform="translate(12, 92)">
-        <rect x="0" y="0" width="86" height="16" rx="4" fill="#7F52FF" opacity="0.15" />
-        <circle cx="8" cy="8" r="3" fill="#3DDC84" />
-        <text x="16" y="11" class="font-mono" font-size="7.5" font-weight="700" fill="#7F52FF">Bonsai 4B · 32 t/s</text>
+      <!-- UI Element 2: Generated Image Canvas (Diffusion Preview) -->
+      <g transform="translate(12, 33)" clip-path="url(#mpImgClip)">
+        <rect x="0" y="0" width="86" height="52" fill="url(#artGrad)" />
+        <!-- Nebula / Sun Circle -->
+        <circle cx="60" cy="20" r="10" fill="#FFD740" opacity="0.85" filter="url(#glow-mp)" />
+        <!-- Horizon Hills Layer 1 -->
+        <path d="M 0 38 Q 24 26 48 34 T 86 30 L 86 52 L 0 52 Z" fill="#1e1b4b" opacity="0.7" />
+        <!-- Horizon Hills Layer 2 -->
+        <path d="M 0 44 Q 30 34 58 40 T 86 38 L 86 52 L 0 52 Z" fill="#0f172a" opacity="0.9" />
+        <!-- Sparkle Accent -->
+        <path d="M 18 16 L 20 12 L 22 16 L 26 18 L 22 20 L 20 24 L 18 20 L 14 18 Z" fill="#ffffff" opacity="0.9" />
+      </g>
+
+      <!-- UI Element 3: Diffusion Model Spec Badge -->
+      <g transform="translate(12, 90)">
+        <rect x="0" y="0" width="86" height="15" class="mockup-status-bg" />
+        <circle cx="7" cy="7.5" r="2" fill="#3DDC84" />
+        <text x="13" y="10" class="font-mono mockup-status-text" font-size="6.5">Bonsai 4B · 4 Steps</text>
       </g>
 
       <!-- UI Element 4: Bottom Input Pill with Token Stream -->
-      <g transform="translate(10, 114)">
+      <g transform="translate(10, 112)">
         <rect x="0" y="0" width="90" height="20" rx="10" fill="#21262d" opacity="0.1" />
         <rect x="2" y="2" width="86" height="16" rx="8" class="device-body" stroke-width="0.5" />
         <circle cx="10" cy="10" r="3" fill="url(#tokenGrad)" />
