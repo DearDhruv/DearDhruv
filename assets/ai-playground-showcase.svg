@@ -2,7 +2,7 @@
   <defs>
     <!-- Blurs and Gradients -->
     <filter id="glow-ai" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feGaussianBlur stdDeviation="6" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
     
@@ -27,12 +27,12 @@
 
     <!-- Drop Shadow for the Card -->
     <filter id="shadow-ai" x="-5%" y="-10%" width="110%" height="125%">
-      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.08" flood-color="#000" />
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-opacity="0.08" flood-color="#000" />
     </filter>
 
     <!-- Clip Path for Diffusion Artwork -->
     <clipPath id="diffusionArtClip">
-      <rect x="0" y="0" width="94" height="56" rx="6" />
+      <rect x="0" y="0" width="86" height="54" rx="6" />
     </clipPath>
 
     <!-- Clip Path for Workstation Window -->
@@ -54,7 +54,7 @@
     .card-bg { fill: #ffffff; stroke: #e1e4e8; stroke-width: 1; rx: 16px; }
     .text-title { font-weight: 800; font-size: 26px; fill: url(#aiTitleGrad); }
     .text-category { fill: #F88909; font-weight: 700; font-size: 11px; letter-spacing: 2px; }
-    .text-desc { fill: #57606a; font-size: 13.5px; }
+    .text-desc { fill: #4b5563; font-size: 13.5px; }
     .station-frame { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.5; rx: 14px; }
     .panel-bg { fill: #ffffff; stroke: #e1e4e8; stroke-width: 1; }
     .panel-accent { fill: #f0f3f6; }
@@ -95,11 +95,11 @@
     <!-- Title -->
     <text x="0" y="80" class="font-sans text-title">AI Playground</text>
     
-    <!-- Description with generous line-height -->
+    <!-- Description with generous line-height and comfortable margins -->
     <text x="0" y="114" class="font-sans text-desc">Offline on-device LLM &amp; diffusion image synthesis for Android &amp; iOS.</text>
-    <text x="0" y="136" class="font-sans text-desc">Powered by llama.cpp v0.7.0, LiteRT multi-graph &amp; Apple MLX Metal.</text>
+    <text x="0" y="136" class="font-sans text-desc">Runs llama.cpp v0.7.0, LiteRT multi-graph &amp; Apple MLX Metal.</text>
 
-    <!-- Badges Row -->
+    <!-- Badges Row (Total width 443px, leaves 85px before x=528) -->
     <g transform="translate(0, 166)">
       <!-- Google Play Badge -->
       <g>
@@ -113,11 +113,11 @@
       </g>
       <!-- Dual Engine Badge -->
       <g transform="translate(213, 0)">
-        <rect x="0" y="-12" width="140" height="22" rx="6" class="tech-badge" />
-        <text x="70" y="3" class="font-sans tech-text" text-anchor="middle">🧠 llama.cpp &amp; LiteRT</text>
+        <rect x="0" y="-12" width="132" height="22" rx="6" class="tech-badge" />
+        <text x="66" y="3" class="font-sans tech-text" text-anchor="middle">🧠 llama.cpp &amp; LiteRT</text>
       </g>
       <!-- MLX Badge -->
-      <g transform="translate(361, 0)">
+      <g transform="translate(353, 0)">
         <rect x="0" y="-12" width="90" height="22" rx="6" class="tech-badge" />
         <text x="45" y="3" class="font-sans tech-text" text-anchor="middle">🍏 MLX Metal</text>
       </g>
@@ -130,7 +130,7 @@
     <rect x="0" y="0" width="232" height="164" class="station-frame" />
     
     <!-- Subtle Neural Mesh Background -->
-    <g stroke="#7F52FF" stroke-width="0.6" opacity="0.25">
+    <g stroke="#7F52FF" stroke-width="0.5" opacity="0.22">
       <line x1="20" y1="20" x2="70" y2="35" />
       <line x1="70" y1="35" x2="140" y2="15" />
       <line x1="140" y1="15" x2="210" y2="40" />
@@ -146,85 +146,84 @@
       <circle cx="215" cy="120" r="2" fill="#00E5FF" />
     </g>
 
-    <!-- 1. LLM Generation Panel (Top Module) -->
-    <g transform="translate(10, 10)">
-      <rect x="0" y="0" width="212" height="66" rx="8" class="panel-bg" />
+    <!-- 1. LLM Generation Panel (Top Module, width 214, x=9) -->
+    <g transform="translate(9, 9)">
+      <rect x="0" y="0" width="214" height="66" rx="8" class="panel-bg" />
       
-      <!-- Panel Header Bar -->
+      <!-- Panel Header Bar with Model Dropdown & Telemetry -->
       <g transform="translate(8, 7)">
-        <!-- Backend Badge -->
-        <rect x="0" y="0" width="98" height="15" rx="4" fill="rgba(0, 176, 255, 0.12)" stroke="#00B0FF" stroke-width="0.5" />
+        <!-- Real App Model Selector Dropdown Pill -->
+        <rect x="0" y="0" width="102" height="15" rx="4" fill="rgba(0, 176, 255, 0.12)" stroke="#00B0FF" stroke-width="0.5" />
         <circle cx="6" cy="7.5" r="2" fill="#00E5FF" />
-        <text x="12" y="10.5" class="font-mono" font-size="6.5" font-weight="700" fill="#00B0FF">llama.cpp · Vulkan</text>
+        <text x="12" y="10.5" class="font-mono" font-size="6" font-weight="700" fill="#00B0FF">SmolLM2 360M (Q8) ▼</text>
         
-        <!-- Live Token Velocity -->
-        <g transform="translate(196, 0)">
-          <rect x="-62" y="0" width="62" height="15" rx="4" fill="rgba(0, 230, 118, 0.12)" stroke="#00E676" stroke-width="0.5" />
-          <circle cx="-56" cy="7.5" r="2" fill="#00E676" />
-          <text x="-50" y="10.5" class="font-mono" font-size="6.5" font-weight="700" fill="#00C853">42.8 t/s · OFFLINE</text>
+        <!-- Live Velocity Badge (Positioned at right with safe margin) -->
+        <g transform="translate(142, 0)">
+          <rect x="0" y="0" width="56" height="15" rx="4" fill="rgba(0, 230, 118, 0.12)" stroke="#00E676" stroke-width="0.5" />
+          <circle cx="6" cy="7.5" r="2" fill="#00E676" />
+          <text x="12" y="10.5" class="font-mono" font-size="6" font-weight="700" fill="#00C853">42.8 t/s</text>
         </g>
       </g>
 
       <!-- Active Prompt & Reasoning Stream -->
-      <g transform="translate(8, 28)">
+      <g transform="translate(8, 27)">
         <!-- User Prompt Line -->
-        <rect x="0" y="0" width="196" height="14" rx="4" class="panel-accent" />
-        <circle cx="7" cy="7" r="2" fill="#7F52FF" />
-        <text x="14" y="9.5" class="font-mono code-muted" font-size="6.5">prompt: "Synthesize local reactive state"</text>
+        <rect x="0" y="0" width="198" height="13" rx="3.5" class="panel-accent" />
+        <circle cx="7" cy="6.5" r="2" fill="#7F52FF" />
+        <text x="14" y="9" class="font-mono code-muted" font-size="6">prompt: "Synthesize local reactive state"</text>
 
         <!-- Streamed LLM Token Output with <think> tag -->
-        <g transform="translate(0, 18)">
+        <g transform="translate(0, 16)">
           <!-- Thinking chip -->
-          <rect x="0" y="0" width="44" height="12" rx="3" fill="rgba(127, 82, 255, 0.15)" />
-          <text x="4" y="8.5" class="font-mono" font-size="6" font-weight="700" fill="#7F52FF">&lt;think&gt;</text>
+          <rect x="0" y="0" width="40" height="13" rx="3" fill="rgba(127, 82, 255, 0.15)" />
+          <text x="4" y="9" class="font-mono" font-size="6" font-weight="700" fill="#7F52FF">&lt;think&gt;</text>
           <!-- Streaming Tokens with Gradient Accent -->
-          <text x="48" y="9" class="font-mono code-text" font-size="6.5" font-weight="600">val localFlow = engine.streamTokens()</text>
+          <text x="45" y="9.5" class="font-mono code-text" font-size="6" font-weight="600">val localFlow = engine.streamTokens()</text>
         </g>
       </g>
     </g>
 
-    <!-- 2. On-Device Diffusion Panel (Bottom Module) -->
-    <g transform="translate(10, 82)">
-      <rect x="0" y="0" width="212" height="72" rx="8" class="panel-bg" />
+    <!-- 2. On-Device Diffusion Panel (Bottom Module, width 214, x=9) -->
+    <g transform="translate(9, 81)">
+      <rect x="0" y="0" width="214" height="73" rx="8" class="panel-bg" />
       
-      <!-- Left: Synthesized Artwork Canvas -->
-      <g transform="translate(8, 8)" clip-path="url(#diffusionArtClip)">
-        <rect x="0" y="0" width="94" height="56" fill="url(#diffusionArtGrad)" />
+      <!-- Left: Synthesized Artwork Canvas (86 × 54) -->
+      <g transform="translate(8, 9)" clip-path="url(#diffusionArtClip)">
+        <rect x="0" y="0" width="86" height="54" fill="url(#diffusionArtGrad)" />
         
         <!-- Synthesized Celestial Sun/Aura -->
-        <circle cx="68" cy="18" r="12" fill="#FFD740" opacity="0.9" filter="url(#glow-ai)" />
+        <circle cx="62" cy="16" r="11" fill="#FFD740" opacity="0.9" filter="url(#glow-ai)" />
         
         <!-- Neural Hills / Horizons -->
-        <path d="M 0 38 Q 28 26 56 34 T 94 30 L 94 56 L 0 56 Z" fill="#311042" opacity="0.8" />
-        <path d="M 0 44 Q 32 36 64 42 T 94 40 L 94 56 L 0 56 Z" fill="#110726" opacity="0.95" />
+        <path d="M 0 36 Q 26 25 52 32 T 86 28 L 86 54 L 0 54 Z" fill="#311042" opacity="0.8" />
+        <path d="M 0 42 Q 30 34 60 40 T 86 38 L 86 54 L 0 54 Z" fill="#110726" opacity="0.95" />
         
         <!-- Stylized Digital Bonsai Tree Silhouette -->
-        <path d="M 38 48 C 38 42, 34 38, 30 34 C 26 30, 24 24, 28 20 C 32 16, 40 18, 42 24 C 44 20, 52 20, 54 26 C 56 32, 48 38, 44 42 L 44 48 Z" fill="#00E5FF" opacity="0.8" />
-        <circle cx="28" cy="20" r="3.5" fill="#E040FB" opacity="0.85" />
-        <circle cx="42" cy="22" r="4.5" fill="#69F0AE" opacity="0.85" />
-        <circle cx="53" cy="25" r="3.5" fill="#FFD740" opacity="0.85" />
+        <path d="M 34 46 C 34 40, 30 36, 26 32 C 22 28, 20 22, 24 18 C 28 14, 36 16, 38 22 C 40 18, 48 18, 50 24 C 52 30, 44 36, 40 40 L 40 46 Z" fill="#00E5FF" opacity="0.85" />
+        <circle cx="24" cy="18" r="3.2" fill="#E040FB" opacity="0.85" />
+        <circle cx="38" cy="20" r="4.2" fill="#69F0AE" opacity="0.85" />
+        <circle cx="49" cy="23" r="3.2" fill="#FFD740" opacity="0.85" />
         
         <!-- Step Overlay Badge -->
-        <rect x="4" y="4" width="56" height="11" rx="3" fill="rgba(0, 0, 0, 0.65)" />
-        <text x="8" y="11.5" class="font-mono" font-size="5.5" font-weight="700" fill="#69F0AE">Step 4/4 · FLUX</text>
+        <rect x="4" y="4" width="54" height="11" rx="3" fill="rgba(0, 0, 0, 0.65)" />
+        <text x="7" y="11.5" class="font-mono" font-size="5.5" font-weight="700" fill="#69F0AE">Step 4/4 · FLUX</text>
       </g>
 
-      <!-- Right: Diffusion Model Specs & Hardware Badges -->
-      <g transform="translate(110, 8)">
+      <!-- Right: Diffusion Model Specs & Hardware Badges (Safe width 108, ends at 208 < 214) -->
+      <g transform="translate(102, 9)">
         <text x="0" y="12" class="font-sans" font-size="9" font-weight="800" fill="url(#tokenStreamGrad)">Bonsai Image 4B</text>
-        <text x="0" y="24" class="font-mono code-muted" font-size="6.5">1.58-bit Ternary DiT</text>
+        <text x="0" y="23" class="font-mono code-muted" font-size="6">1.58-bit Ternary DiT</text>
         
-        <!-- Engine Accents -->
-        <g transform="translate(0, 30)">
-          <!-- Hardware tag -->
-          <rect x="0" y="0" width="94" height="12" rx="3" fill="rgba(127, 82, 255, 0.12)" stroke="#7F52FF" stroke-width="0.5" />
-          <circle cx="5" cy="6" r="1.5" fill="#7F52FF" />
-          <text x="10" y="8.5" class="font-mono" font-size="6" font-weight="700" fill="#7F52FF">LiteRT · Apple MLX</text>
+        <!-- Engine Accents Pill -->
+        <g transform="translate(0, 29)">
+          <rect x="0" y="0" width="98" height="13" rx="3" fill="rgba(127, 82, 255, 0.12)" stroke="#7F52FF" stroke-width="0.5" />
+          <circle cx="6" cy="6.5" r="1.5" fill="#7F52FF" />
+          <text x="12" y="9.2" class="font-mono" font-size="5.8" font-weight="700" fill="#7F52FF">LiteRT · Apple MLX</text>
         </g>
         
-        <!-- Telemetry: 100% On-Device -->
-        <g transform="translate(0, 45)">
-          <text x="0" y="8" class="font-mono code-muted" font-size="6">🔒 0 KB Telemetry · Zero Cloud</text>
+        <!-- Privacy Telemetry Badge -->
+        <g transform="translate(0, 46)">
+          <text x="0" y="8" class="font-mono code-muted" font-size="5.8">🔒 100% On-Device · Zero Cloud</text>
         </g>
       </g>
     </g>
