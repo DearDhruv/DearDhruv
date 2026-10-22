@@ -90,26 +90,26 @@
     
     <!-- Description -->
     <text x="0" y="130" class="font-sans text-desc">Specializing in Jetpack Compose, Kotlin Multiplatform (KMP),</text>
-    <text x="0" y="152" class="font-sans text-desc">adaptive design systems, speaker at GDG DevFests.</text>
+    <text x="0" y="152" class="font-sans text-desc">on-device AI runtimes, Android TV &amp; adaptive design systems.</text>
 
     <!-- Tag Badges -->
     <g transform="translate(0, 192)">
       <!-- Badge 1: 14+ Years -->
       <g>
-        <rect x="0" y="0" width="105" height="26" class="tag-special-rect" />
-        <text x="52.5" y="17" class="font-sans tag-special-text" text-anchor="middle">⚡ 14+ Years</text>
+        <rect x="0" y="0" width="102" height="26" class="tag-special-rect" />
+        <text x="51" y="17" class="font-sans tag-special-text" text-anchor="middle">⚡ 14+ Years</text>
       </g>
       
-      <!-- Badge 2: KMP & Compose -->
-      <g transform="translate(115, 0)">
-        <rect x="0" y="0" width="145" height="26" class="tag-rect" />
-        <text x="72.5" y="17" class="font-sans tag-text" text-anchor="middle">KMP &amp; Compose</text>
+      <!-- Badge 2: KMP, Compose & AI -->
+      <g transform="translate(112, 0)">
+        <rect x="0" y="0" width="152" height="26" class="tag-rect" />
+        <text x="76" y="17" class="font-sans tag-text" text-anchor="middle">KMP · Compose · AI</text>
       </g>
       
       <!-- Badge 3: Android Artist -->
-      <g transform="translate(270, 0)">
-        <rect x="0" y="0" width="130" height="26" class="tag-rect" />
-        <text x="65" y="17" class="font-mono tag-text" text-anchor="middle">"Android Artist"</text>
+      <g transform="translate(274, 0)">
+        <rect x="0" y="0" width="126" height="26" class="tag-rect" />
+        <text x="63" y="17" class="font-mono tag-text" text-anchor="middle">"Android Artist"</text>
       </g>
     </g>
   </g>

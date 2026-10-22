@@ -13,7 +13,7 @@
   <a href="mailto:dhruv.time@gmail.com"><img src="https://img.shields.io/badge/Email-dhruv.time-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
 </p>
 
-Lead Android Engineer with **14+ years** of experience building scalable Android applications, leading teams, and delivering performant, user-centric products across global markets. Specialized in **Kotlin**, **Jetpack Compose**, **adaptive layouts**, and modern Android architecture - with strong experience in **hardware integrations**, **multimedia editing workflows**, and **technical speaking** at developer conferences.
+Lead Android Engineer with **14+ years** of experience building scalable Android applications, leading teams, and delivering performant, user-centric products across global markets. Specialized in **Kotlin Multiplatform (KMP)**, **Jetpack Compose / Compose for TV**, **on-device AI (LLM & diffusion image synthesis runtimes)**, and **adaptive layouts** across phones, foldables, tablets, and TV screens — with strong expertise in **hardware integrations**, **multimedia pipelines**, and **technical speaking** at developer conferences.
 
 <p align="center">
   <img src="./assets/divider.svg" width="100%">
@@ -22,25 +22,23 @@ Lead Android Engineer with **14+ years** of experience building scalable Android
 ## 🧰 Tech Stack
 
 **Languages**  
-![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white) ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white) ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) ![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 
 **Android & UI**  
-![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white) ![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-4285F4?style=for-the-badge&logo=jetpackcompose&logoColor=white) ![Material 3](https://img.shields.io/badge/Material%203-757575?style=for-the-badge&logo=materialdesign&logoColor=white) ![Adaptive Layouts](https://img.shields.io/badge/Adaptive%20Layouts-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white) ![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-4285F4?style=for-the-badge&logo=jetpackcompose&logoColor=white) ![Compose for TV](https://img.shields.io/badge/Compose%20for%20TV-00838F?style=for-the-badge&logo=android&logoColor=white) ![Material 3](https://img.shields.io/badge/Material%203-757575?style=for-the-badge&logo=materialdesign&logoColor=white) ![Adaptive Layouts](https://img.shields.io/badge/Adaptive%20Layouts-3DDC84?style=for-the-badge&logo=android&logoColor=white)
 
 **Multiplatform**  
-![Kotlin Multiplatform](https://img.shields.io/badge/Kotlin%20Multiplatform-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white) ![Compose Multiplatform](https://img.shields.io/badge/Compose%20Multiplatform-4285F4?style=for-the-badge&logo=jetpackcompose&logoColor=white)
+![Kotlin Multiplatform](https://img.shields.io/badge/Kotlin%20Multiplatform-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white) ![Compose Multiplatform](https://img.shields.io/badge/Compose%20Multiplatform-4285F4?style=for-the-badge&logo=jetpackcompose&logoColor=white) ![Apple MLX](https://img.shields.io/badge/Apple%20MLX-000000?style=for-the-badge&logo=apple&logoColor=white)
 
-**Media & Hardware**  
-![Media3](https://img.shields.io/badge/Media3-3DDC84?style=for-the-badge&logo=android&logoColor=white) ![FFmpeg](https://img.shields.io/badge/FFmpeg-007808?style=for-the-badge&logo=ffmpeg&logoColor=white) ![Hardware Integration](https://img.shields.io/badge/Hardware%20Integration-455A64?style=for-the-badge&logo=raspberrypi&logoColor=white)
+**On-Device AI & Multimedia**  
+![llama.cpp](https://img.shields.io/badge/llama.cpp-F57C00?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![LiteRT](https://img.shields.io/badge/LiteRT-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white) ![Media3](https://img.shields.io/badge/Media3-3DDC84?style=for-the-badge&logo=android&logoColor=white) ![FFmpeg](https://img.shields.io/badge/FFmpeg-007808?style=for-the-badge&logo=ffmpeg&logoColor=white) ![Hardware Integration](https://img.shields.io/badge/Hardware%20Integration-455A64?style=for-the-badge&logo=raspberrypi&logoColor=white)
 
-**Data & APIs**  
-![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white) ![OpenAPI](https://img.shields.io/badge/OpenAPI-6BA539?style=for-the-badge&logo=openapiinitiative&logoColor=white) ![Coroutines & Flow](https://img.shields.io/badge/Coroutines%20%26%20Flow-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)
+**Data, Cloud & APIs**  
+![Firebase](https://img.shields.io/badge/Firebase-DD2C00?style=for-the-badge&logo=firebase&logoColor=white) ![Coroutines & Flow](https://img.shields.io/badge/Coroutines%20%26%20Flow-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white) ![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white) ![OpenAPI](https://img.shields.io/badge/OpenAPI-6BA539?style=for-the-badge&logo=openapiinitiative&logoColor=white)
 
-**Async, DI & Build**  
-![Hilt](https://img.shields.io/badge/Hilt-2C8EBB?style=for-the-badge&logo=dagger&logoColor=white) ![Gradle](https://img.shields.io/badge/Gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white)
-
-**Architecture**  
-Clean Architecture · MVVM · MVI · Modularization
+**Architecture & Build**  
+![Hilt](https://img.shields.io/badge/Hilt-2C8EBB?style=for-the-badge&logo=dagger&logoColor=white) ![Gradle](https://img.shields.io/badge/Gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white) ![R8 Optimization](https://img.shields.io/badge/R8%20Optimization-3DDC84?style=for-the-badge&logo=android&logoColor=white)  
+Clean Architecture · MVI · MVVM · Modularization
 
 <p align="center">
   <img src="./assets/divider.svg" width="100%">
@@ -50,13 +48,19 @@ Clean Architecture · MVVM · MVI · Modularization
 
 <p align="center">
   <a href="https://play.google.com/store/apps/details?id=com.deardhruv.velocihue">
-    <img src="./assets/veloci-hue-showcase.svg" width="100%" alt="Veloci Hue - KMP × CMP game for Android & iOS">
+    <img src="./assets/veloci-hue-showcase.svg" width="100%" alt="Veloci Hue - KMP × CMP arcade game for Android, iOS & Android TV">
   </a>
 </p>
 
 <p align="center">
   <a href="https://play.google.com/store/apps/details?id=com.deardhruv.llmplayground">
-    <img src="./assets/model-playground-showcase.svg" width="100%" alt="Model Playground - Offline-first on-device LLM playground for Android">
+    <img src="./assets/model-playground-showcase.svg" width="100%" alt="Model Playground - Offline on-device LLM & diffusion image synthesis for Android & iOS">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/DearDhruv/OpenStore">
+    <img src="./assets/open-store-showcase.svg" width="100%" alt="Open Store - Lightweight Android TV launcher utility built with Compose for TV">
   </a>
 </p>
 
