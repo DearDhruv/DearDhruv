@@ -1,26 +1,55 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="100%" height="200">
   <defs>
-    <!-- Blurs and Gradients -->
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="12" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    <!-- Blurs and Neon Glow Filters -->
+    <filter id="glow-vh" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur1" />
+      <feGaussianBlur stdDeviation="10" result="blur2" />
+      <feComposite in="SourceGraphic" in2="blur1" operator="over" />
+      <feComposite in2="blur2" operator="over" />
     </filter>
-    
+
     <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#FF5252" />
       <stop offset="50%" stop-color="#FFD740" />
-      <stop offset="100%" stop-color="#69F0AE" />
+      <stop offset="100%" stop-color="#00E676" />
     </linearGradient>
 
-    <linearGradient id="btnGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FF5252" />
-      <stop offset="100%" stop-color="#F88909" />
+    <!-- Synthwave Floor Gradient -->
+    <linearGradient id="floorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00E676" stop-opacity="0.02" />
+      <stop offset="40%" stop-color="#00E676" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#00E676" stop-opacity="0.32" />
+    </linearGradient>
+
+    <!-- Ball Gradient -->
+    <radialGradient id="avatarBallGrad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="35%" stop-color="#69F0AE" />
+      <stop offset="80%" stop-color="#00E676" />
+      <stop offset="100%" stop-color="#00C853" />
+    </radialGradient>
+
+    <!-- Gate Color Gradients -->
+    <linearGradient id="gateNeonBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2979FF" />
+      <stop offset="50%" stop-color="#00E5FF" />
+      <stop offset="100%" stop-color="#2979FF" />
     </linearGradient>
 
     <!-- Drop Shadow for the Card -->
-    <filter id="shadow" x="-5%" y="-10%" width="110%" height="125%">
-      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.08" flood-color="#000" />
+    <filter id="shadow-vh" x="-5%" y="-10%" width="110%" height="125%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-opacity="0.08" flood-color="#000" />
     </filter>
+
+    <!-- Clip Path for Arcade Screen -->
+    <clipPath id="vhGameClip">
+      <rect x="0" y="0" width="232" height="164" rx="14" />
+    </clipPath>
+
+    <!-- Scanning Line Pattern -->
+    <pattern id="scanlinePattern" width="232" height="4" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="232" height="1.5" fill="#000000" fill-opacity="0.25" />
+    </pattern>
   </defs>
 
   <style>
@@ -36,73 +65,171 @@
     .card-bg { fill: #ffffff; stroke: #e1e4e8; stroke-width: 1; rx: 16px; }
     .text-title { font-weight: 800; font-size: 26px; fill: url(#textGrad); }
     .text-category { fill: #f88909; font-weight: 700; font-size: 11px; letter-spacing: 2px; }
-    .text-desc { fill: #57606a; font-size: 13.5px; }
-    .game-bg { fill: #eaeef2; rx: 12px; }
+    .text-desc { fill: #4b5563; font-size: 13.5px; }
+    .arcade-bezel { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.5; rx: 14px; }
     
-    /* Play Buttons Light */
+    /* Badges Light */
     .store-badge { fill: #24292f; rx: 6px; }
     .store-text { fill: #ffffff; font-weight: 700; font-size: 11px; }
+    .tech-badge { fill: #f2f4f7; stroke: #d0d7de; stroke-width: 1; rx: 6px; }
+    .tech-text { fill: #24292f; font-weight: 600; font-size: 10.5px; }
 
     /* Dark Theme Overrides */
     @media (prefers-color-scheme: dark) {
       .card-bg { fill: #0d1117; stroke: #30363d; }
       .text-category { fill: #ffb74d; }
       .text-desc { fill: #8b949e; }
-      .game-bg { fill: #161b22; }
+      .arcade-bezel { fill: #161b22; stroke: #30363d; }
       .store-badge { fill: #21262d; stroke: #30363d; stroke-width: 1; }
       .store-text { fill: #f0f6fc; }
+      .tech-badge { fill: #161b22; stroke: #30363d; stroke-width: 1; }
+      .tech-text { fill: #c9d1d9; }
     }
   </style>
 
   <!-- Background Card -->
-  <rect x="2" y="2" width="796" height="196" class="card-bg" filter="url(#shadow)" />
+  <rect x="2" y="2" width="796" height="196" rx="16" class="card-bg" filter="url(#shadow-vh)" />
 
   <!-- Left Content Column -->
-  <g transform="translate(45, 0)">
+  <g transform="translate(42, 0)">
     <!-- Category -->
-    <text x="0" y="46" class="font-sans text-category">FEATURED PROJECT</text>
+    <text x="0" y="44" class="font-sans text-category">FEATURED PROJECT · KMP ARCADE</text>
     
     <!-- Title -->
-    <text x="0" y="84" class="font-sans text-title">Veloci Hue</text>
+    <text x="0" y="80" class="font-sans text-title">Veloci Hue</text>
     
-    <!-- Description -->
-    <text x="0" y="118" class="font-sans text-desc">A fast-paced, cross-platform color matching game built using</text>
-    <text x="0" y="138" class="font-sans text-desc">Kotlin Multiplatform &amp; Compose Multiplatform for Android &amp; iOS.</text>
+    <!-- Description with generous line-height and comfortable margins -->
+    <text x="0" y="114" class="font-sans text-desc">Fast-paced arcade color reflex game built for Mobile &amp; Android TV.</text>
+    <text x="0" y="136" class="font-sans text-desc">KMP &amp; Compose Multiplatform with cloud sync &amp; D-pad controls.</text>
 
-    <!-- Store Badges -->
+    <!-- Badges Row (Total width 427px, leaves 100px before x=528) -->
     <g transform="translate(0, 166)">
       <!-- Google Play Badge -->
       <g>
-        <rect x="0" y="-12" width="110" height="22" class="store-badge" />
-        <text x="55" y="3" class="font-sans store-text" text-anchor="middle">▶ Google Play</text>
+        <rect x="0" y="-12" width="105" height="22" rx="6" class="store-badge" />
+        <text x="52.5" y="3" class="font-sans store-text" text-anchor="middle">▶ Google Play</text>
       </g>
-      <!-- App Store Badge -->
-      <g transform="translate(120, 0)">
-        <rect x="0" y="-12" width="125" height="22" class="store-badge" />
-        <text x="62.5" y="3" class="font-sans store-text" text-anchor="middle">🍏 App Store (Soon)</text>
+      <!-- Android TV Badge -->
+      <g transform="translate(113, 0)">
+        <rect x="0" y="-12" width="102" height="22" rx="6" class="tech-badge" />
+        <text x="51" y="3" class="font-sans tech-text" text-anchor="middle">📺 Android TV</text>
+      </g>
+      <!-- KMP × CMP Badge -->
+      <g transform="translate(223, 0)">
+        <rect x="0" y="-12" width="92" height="22" rx="6" class="tech-badge" />
+        <text x="46" y="3" class="font-sans tech-text" text-anchor="middle">⚡ KMP × CMP</text>
+      </g>
+      <!-- Cloud Sync v5 Badge -->
+      <g transform="translate(323, 0)">
+        <rect x="0" y="-12" width="104" height="22" rx="6" class="tech-badge" />
+        <text x="52" y="3" class="font-sans tech-text" text-anchor="middle">☁️ Cloud Sync v5</text>
       </g>
     </g>
   </g>
 
-  <!-- Right Content: Playful visual representation of Veloci Hue -->
-  <g transform="translate(540, 20)">
-    <!-- Simulated Screen Container -->
-    <rect x="0" y="0" width="215" height="160" class="game-bg" />
+  <!-- Right Content: Authentic Veloci Hue Arcade Display -->
+  <g transform="translate(528, 18)" clip-path="url(#vhGameClip)">
+    <!-- Arcade Display Background -->
+    <rect x="0" y="0" width="232" height="164" rx="14" fill="#050811" stroke="#1c2538" stroke-width="1.5" />
     
-    <!-- Speed/Hue Trails (Glow Effect) -->
-    <!-- Violet Trail -->
-    <path d="M 20 80 Q 70 30 120 80 T 200 70" fill="none" stroke="#7F52FF" stroke-width="12" stroke-linecap="round" opacity="0.6" filter="url(#glow)" />
-    <!-- Yellow/Orange Trail -->
-    <path d="M 15 95 Q 80 130 135 70 T 205 100" fill="none" stroke="#FFD740" stroke-width="8" stroke-linecap="round" opacity="0.5" filter="url(#glow)" />
-    <!-- Cyan/Mint Trail -->
-    <path d="M 30 65 Q 90 100 110 50 T 190 110" fill="none" stroke="#00E5FF" stroke-width="6" stroke-linecap="round" opacity="0.4" filter="url(#glow)" />
+    <!-- Synth-Wave Grid Floor -->
+    <rect x="0" y="30" width="232" height="134" fill="url(#floorGrad)" />
     
-    <!-- Interactive Game Orb (Gradient) -->
-    <circle cx="120" cy="80" r="16" fill="url(#btnGrad)" filter="url(#glow)" />
-    <circle cx="116" cy="76" r="4" fill="#ffffff" opacity="0.6" />
+    <!-- Vanishing Perspective Lines (Receding to horizon center x=116, y=30) -->
+    <path d="M 116 30 L -30 164 M 116 30 L 25 164 M 116 30 L 72 164 M 116 30 L 116 164 M 116 30 L 160 164 M 116 30 L 207 164 M 116 30 L 262 164" stroke="#00E676" stroke-width="0.75" opacity="0.30" />
     
-    <!-- Monospace Overlay (Code + Game Sync Theme) -->
-    <text x="14" y="26" font-size="10" fill="#888" opacity="0.4" class="font-mono">val speed = 250.fps</text>
-    <text x="14" y="144" font-size="10" fill="#888" opacity="0.4" class="font-mono">hue.colorflow()</text>
+    <!-- Horizontal Perspective Crossbars (Exponential foreshortening) -->
+    <line x1="0" y1="46" x2="232" y2="46" stroke="#00E676" stroke-width="0.5" opacity="0.18" />
+    <line x1="0" y1="68" x2="232" y2="68" stroke="#00E676" stroke-width="0.6" opacity="0.22" />
+    <line x1="0" y1="98" x2="232" y2="98" stroke="#00E676" stroke-width="0.75" opacity="0.28" />
+    <line x1="0" y1="138" x2="232" y2="138" stroke="#00E676" stroke-width="1.0" opacity="0.38" />
+
+    <!-- 1. Distant Gates (Depth on Horizon) -->
+    <rect x="108" y="32" width="16" height="2" rx="1" fill="#FF1744" opacity="0.65" filter="url(#glow-vh)" />
+    <rect x="100" y="44" width="32" height="3" rx="1.5" fill="#2979FF" opacity="0.75" filter="url(#glow-vh)" />
+
+    <!-- 2. Authentic Active Neon Archway Gate (Directly from feature_graphic.svg) -->
+    <!-- Frame: Left Pillar, Right Pillar, Crossbar with Neon Tube Core -->
+    <g filter="url(#glow-vh)">
+      <!-- Left Pillar -->
+      <rect x="52" y="52" width="6" height="82" rx="2" fill="url(#gateNeonBlue)" />
+      <!-- Right Pillar -->
+      <rect x="174" y="52" width="6" height="82" rx="2" fill="url(#gateNeonBlue)" />
+      <!-- Top Crossbar -->
+      <rect x="52" y="52" width="128" height="6" rx="2" fill="url(#gateNeonBlue)" />
+      <!-- Inner White Neon Light Tube Strip -->
+      <path d="M 55 132 V 55 H 177 V 132" stroke="#ffffff" stroke-width="1.5" stroke-opacity="0.9" fill="none" />
+    </g>
+
+    <!-- 3. Collectible 5-Facet Diamond Gem (Floating in open track) -->
+    <g transform="translate(154, 88)" filter="url(#glow-vh)">
+      <!-- Outer Gem Glow -->
+      <circle cx="0" cy="0" r="7" fill="#00E5FF" opacity="0.35" />
+      <!-- Top Crown Facet -->
+      <polygon points="0,-6 -4.5,-2.5 0,-1 4.5,-2.5" fill="#00E5FF" />
+      <!-- Left Bottom Facet -->
+      <polygon points="-4.5,-2.5 0,6 0,-1" fill="#0091EA" />
+      <!-- Right Bottom Facet -->
+      <polygon points="4.5,-2.5 0,6 0,-1" fill="#76FFFF" />
+      <!-- Bright Core -->
+      <circle cx="0" cy="-1" r="1.2" fill="#ffffff" />
+    </g>
+
+    <!-- 4. Luminous Avatar Ball (High Action reflex rushing through gate) -->
+    <g transform="translate(116, 114)">
+      <!-- Speed Motion Trails behind Avatar -->
+      <circle cx="0" cy="12" r="10" fill="#00E676" opacity="0.25" />
+      <circle cx="0" cy="22" r="7" fill="#00E676" opacity="0.12" />
+      <!-- Forward/Side Speed Streaks -->
+      <line x1="-28" y1="-4" x2="-16" y2="-4" stroke="#69F0AE" stroke-width="2" stroke-linecap="round" opacity="0.65" />
+      <line x1="-36" y1="2" x2="-20" y2="2" stroke="#69F0AE" stroke-width="2.5" stroke-linecap="round" opacity="0.8" />
+      <line x1="-26" y1="8" x2="-16" y2="8" stroke="#69F0AE" stroke-width="1.8" stroke-linecap="round" opacity="0.65" />
+      <line x1="16" y1="2" x2="32" y2="2" stroke="#69F0AE" stroke-width="2" stroke-linecap="round" opacity="0.6" />
+      <!-- Outer Radial Neon Glow Halo -->
+      <circle cx="0" cy="0" r="24" fill="#00E676" opacity="0.30" filter="url(#glow-vh)" />
+      <!-- Main Avatar Orb with Multi-Stop Radial Gradient -->
+      <circle cx="0" cy="0" r="15" fill="url(#avatarBallGrad)" filter="url(#glow-vh)" />
+      <!-- Specular Highlight -->
+      <circle cx="-4" cy="-4" r="3.5" fill="#ffffff" opacity="0.95" />
+    </g>
+
+    <!-- 5. CRT Scanline Pattern Overlay (Arcade feel) -->
+    <rect x="0" y="0" width="232" height="164" fill="url(#scanlinePattern)" pointer-events="none" />
+
+    <!-- 6. Retro Cabinet Corner Brackets (From authentic game branding) -->
+    <path d="M 6 18 V 6 H 18" stroke="#ffffff" stroke-width="1.5" stroke-opacity="0.35" fill="none" />
+    <path d="M 226 18 V 6 H 214" stroke="#ffffff" stroke-width="1.5" stroke-opacity="0.35" fill="none" />
+    <path d="M 6 146 V 158 H 18" stroke="#ffffff" stroke-width="1.5" stroke-opacity="0.35" fill="none" />
+    <path d="M 226 146 V 158 H 214" stroke="#ffffff" stroke-width="1.5" stroke-opacity="0.35" fill="none" />
+
+    <!-- 7. HUD Overlays -->
+    <!-- Score & Streak -->
+    <g transform="translate(10, 10)">
+      <rect x="0" y="0" width="56" height="15" rx="4" fill="rgba(6, 9, 19, 0.82)" stroke="#1c2538" stroke-width="0.75" />
+      <text x="6" y="10.5" class="font-mono" font-size="7.5" font-weight="700" fill="#00E676">2,480 PTS</text>
+      <text x="2" y="24" class="font-mono" font-size="6.5" font-weight="600" fill="#FFD740">★ 4× STREAK</text>
+    </g>
+
+    <!-- TV D-Pad Indicator -->
+    <g transform="translate(166, 10)">
+      <rect x="0" y="0" width="56" height="15" rx="4" fill="rgba(127, 82, 255, 0.22)" stroke="#7F52FF" stroke-width="0.75" />
+      <!-- Mini D-pad Cross -->
+      <g transform="translate(5, 3)">
+        <rect x="3" y="0" width="3" height="9" rx="1" fill="#c4b5fd" />
+        <rect x="0" y="3" width="9" height="3" rx="1" fill="#c4b5fd" />
+      </g>
+      <text x="18" y="10.5" class="font-mono" font-size="6.5" font-weight="700" fill="#c4b5fd">TV D-PAD</text>
+    </g>
+
+    <!-- Bottom HUD Bar -->
+    <g transform="translate(10, 142)">
+      <rect x="0" y="0" width="212" height="14" rx="3" fill="rgba(6, 9, 19, 0.88)" stroke="#1c2538" stroke-width="0.5" />
+      <!-- Heart/Life indicators -->
+      <circle cx="9" cy="7" r="2.5" fill="#FF1744" />
+      <circle cx="17" cy="7" r="2.5" fill="#FF1744" />
+      <circle cx="25" cy="7" r="2.5" fill="#FF1744" />
+      <text x="34" y="9.8" class="font-mono" font-size="6.5" fill="#8b949e">120 FPS</text>
+      <text x="204" y="9.8" class="font-mono" font-size="6.5" font-weight="600" fill="#69F0AE" text-anchor="end">KMP × CMP</text>
+    </g>
   </g>
 </svg>
