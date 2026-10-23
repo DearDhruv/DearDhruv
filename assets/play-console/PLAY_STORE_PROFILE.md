@@ -8,12 +8,12 @@ This directory contains the production-ready branding assets and promotional cop
 
 | Asset | Format | Resolution | Color Depth | File Size | Console Limit | Status |
 |---|---|---|---|---|---|---|
-| **Developer Icon** | `PNG` | `512 × 512 px` | 24-bit RGB (no alpha) | **157.9 KB** (157,887 B) | Up to 1 MB | **Ready for upload** |
-| **Developer Icon** | `JPEG` | `512 × 512 px` | 24-bit RGB | **41.4 KB** (41,383 B) | Up to 1 MB | **Alternative upload** |
-| **Header Image** | `PNG` | `4096 × 2304 px` | 24-bit RGB (no alpha) | **498.4 KB** (498,444 B) | Up to 1 MB | **Ready for upload** |
-| **Header Image** | `JPEG` | `4096 × 2304 px` | 24-bit RGB | **457.9 KB** (457,941 B) | Up to 1 MB | **Alternative upload** |
-| **Developer Icon Source** | `SVG` | Vector (`512 × 512`) | Vector definitions | **6.4 KB** | Source | Editable |
-| **Header Image Source** | `SVG` | Vector (`4096 × 2304`) | Vector definitions | **18.7 KB** | Source | Editable |
+| **Developer Icon** | `PNG` | `512 × 512 px` | 24-bit RGB (no alpha) | **167.4 KB** (171,417 B) | Up to 1 MB | **Ready for upload** |
+| **Developer Icon** | `JPEG` | `512 × 512 px` | 24-bit RGB | **41.7 KB** (42,658 B) | Up to 1 MB | **Alternative upload** |
+| **Header Image** | `PNG` | `4096 × 2304 px` | 24-bit RGB (no alpha) | **844.9 KB** (865,136 B) | Up to 1 MB | **Ready for upload** |
+| **Header Image** | `JPEG` | `4096 × 2304 px` | 24-bit RGB | **665.5 KB** (681,489 B) | Up to 1 MB | **Alternative upload** |
+| **Developer Icon Source** | `SVG` | Vector (`512 × 512`) | Vector definitions | **7.0 KB** | Source | Editable |
+| **Header Image Source** | `SVG` | Vector (`4096 × 2304`) | Vector definitions | **20.9 KB** | Source | Editable |
 
 All raster files are strictly non-transparent, 24-bit RGB (PNG `IHDR` color type `2` / 8 bits per channel), strictly below Google Play Console's 1 MB cap.
 
@@ -23,7 +23,7 @@ All raster files are strictly non-transparent, 24-bit RGB (PNG `IHDR` color type
 
 ### Recommended English (Default)
 > `Android Artist crafting high-performance native apps, on-device AI runtimes & adaptive experiences across Mobile, Foldables and Android TV.`
-- **Character count:** **139 / 140 characters** (Verified)
+- **Character count:** **139 / 140 characters** (Strictly verified)
 
 ### Alternative Options
 - **Option B (Focus on Craft & Architecture - 137 chars):**  
@@ -41,23 +41,23 @@ Google Play Console allows you to add translations for your promotional text to 
 
 ### Spanish (`es-419` / `es-ES`)
 > `Android Artist creando apps nativas de alto rendimiento, IA en dispositivo y diseño adaptativo para Móviles, Plegables y Android TV.`  
-*(131 characters)*
+*(132 characters · <= 140)*
 
 ### French (`fr-FR`)
 > `Android Artist créant des apps natives fluides, de l'IA sur l'appareil et des interfaces adaptatives pour Mobiles, Pliables & TV.`  
-*(130 characters)*
+*(129 characters · <= 140)*
 
 ### German (`de-DE`)
 > `Android Artist: Hochwertige native Apps, On-Device-KI und adaptive UIs für Smartphones, Foldables und Android TV aus einer Hand.`  
-*(127 characters)*
+*(128 characters · <= 140)*
 
 ### Japanese (`ja-JP`)
 > `Android Artist：スマホ、折りたたみ端末、Android TV向けに高性能ネイティブアプリやオンデバイスAI体験を開発。`  
-*(60 characters)*
+*(66 characters · <= 140)*
 
 ### Hindi (`hi-IN`)
 > `Android Artist: मोबाइल, फोल्डेबल्स और Android TV के लिए हाई-परफॉरमेंस ऐप्स और ऑन-डिवाइस AI अनुभव तैयार करते हुए।`  
-*(110 characters)*
+*(112 characters · <= 140)*
 
 ---
 
