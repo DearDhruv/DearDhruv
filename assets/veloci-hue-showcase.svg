@@ -99,8 +99,8 @@
     <text x="0" y="80" class="font-sans text-title">Veloci Hue</text>
     
     <!-- Description with generous line-height and comfortable margins -->
-    <text x="0" y="114" class="font-sans text-desc">Fast-paced arcade color reflex game built for Mobile &amp; Android TV.</text>
-    <text x="0" y="136" class="font-sans text-desc">KMP &amp; Compose Multiplatform with cloud sync &amp; D-pad controls.</text>
+    <text x="0" y="114" class="font-sans text-desc">High-speed neon color reflex arcade with 2.2× Overdrive surge.</text>
+    <text x="0" y="136" class="font-sans text-desc">Zero-allocation 120 FPS engine, TV D-pad &amp; Firestore cloud sync.</text>
 
     <!-- Badges Row (Total width 427px, leaves 100px before x=528) -->
     <g transform="translate(0, 166)">

@@ -87,8 +87,8 @@
     <text x="0" y="80" class="font-sans text-title">Open Store</text>
     
     <!-- Description with generous line-height -->
-    <text x="0" y="114" class="font-sans text-desc">Lightweight Android TV launcher utility built with Compose for TV.</text>
-    <text x="0" y="136" class="font-sans text-desc">Direct 10-foot remote access to Play Store with instant dark startup.</text>
+    <text x="0" y="114" class="font-sans text-desc">Fast, clean Android TV launcher, app drawer &amp; Play Store gateway.</text>
+    <text x="0" y="136" class="font-sans text-desc">Storage health monitor, 10 OLED themes &amp; fluid D-pad navigation.</text>
 
     <!-- Badges Row -->
     <g transform="translate(0, 166)">
@@ -110,7 +110,7 @@
       <!-- Release Version Badge -->
       <g transform="translate(373, 0)">
         <rect x="0" y="-12" width="68" height="22" rx="6" class="tech-badge" />
-        <text x="34" y="3" class="font-sans tech-text" text-anchor="middle">🏷️ v1.0.2</text>
+        <text x="34" y="3" class="font-sans tech-text" text-anchor="middle">🏷️ v1.0.7</text>
       </g>
     </g>
   </g>

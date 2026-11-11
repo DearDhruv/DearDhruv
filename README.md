@@ -52,21 +52,51 @@ Clean Architecture · MVI · MVVM · Modularization
 
 <p align="center">
   <a href="https://play.google.com/store/apps/details?id=com.deardhruv.velocihue" target="_blank" rel="noopener noreferrer">
-    <img src="./assets/veloci-hue-showcase.svg" width="100%" alt="Veloci Hue - KMP × CMP arcade game for Android, iOS & Android TV">
+    <img src="./assets/veloci-hue-showcase.svg" width="100%" alt="VelociHue: Color Match Arcade - High-speed KMP × CMP reflex arcade with 2.2× Overdrive surge & Android TV support">
   </a>
 </p>
+
+### 🎮 [VelociHue: Color Match Arcade](https://play.google.com/store/apps/details?id=com.deardhruv.velocihue)
+*High-speed neon reflex arcade built natively with Kotlin Multiplatform and Compose Multiplatform for Android, iOS, and Android TV (v0.1.8).*
+
+- **Overdrive & Lightspeed Surge**: Split-second RGB color-gate matching, reactive Overdrive gauge with 2.2× world speed surge, obstacle shattering, automatic diamond magnetism, and space bullet blasters.
+- **Zero-Allocation 120 FPS Engine**: Hot-path canvas rendering with `rememberTextMeasurer` and memoized draw state for silky-smooth 60 & 120 FPS gameplay with ultra-low input latency.
+- **Adaptive Multi-Device Ergonomics**: Seamlessly scales across phones, foldables, tablets, and 10-foot Android TV / Google TV with remote D-pad and gamepad controller mapping.
+- **Resilient Cloud & Systems**: Cross-device Firestore Schema v5 cloud sync with self-healing profile sanitization, Google Play Games leaderboards & achievements, and 100% offline gameplay.
+
+<br>
 
 <p align="center">
   <a href="https://play.google.com/store/apps/details?id=com.deardhruv.llmplayground" target="_blank" rel="noopener noreferrer">
-    <img src="./assets/ai-playground-showcase.svg" width="100%" alt="AI Playground - Offline on-device LLM & diffusion image synthesis for Android & iOS">
+    <img src="./assets/ai-playground-showcase.svg" width="100%" alt="AI Playground: Offline LLM AI - 100% private on-device LLM chat &amp; diffusion synthesis powered by llama.cpp v0.8.0, LiteRT-LM &amp; Apple MLX">
   </a>
 </p>
 
+### 🧠 [AI Playground: Offline LLM AI](https://play.google.com/store/apps/details?id=com.deardhruv.llmplayground)
+*100% private, on-device AI workstation running open-source LLMs and diffusion image synthesis directly on mobile silicon (v1.7.7).*
+
+- **Multi-Engine Neural Runtimes**: Powered by `llama.cpp v0.8.0` with ARM KleidiAI vector kernels and dynamic Multi-Binary Vulkan/OpenCL GPU routing on Android, Google AI Edge `LiteRT-LM` multi-graph, and Apple `MLX Swift` Metal GPU on iOS.
+- **On-Device Image Generation**: Integrated local diffusion engine running Bonsai Image Ternary 4B (FLUX.2-klein 1.58-bit / 2-bit ternary DiT) via LiteRT and Apple MLX.
+- **Deep Reasoning & Popular LLMs**: Full thought trace streaming (`<think>` blocks) with DeepSeek-R1, Meta Llama 3.3 / 3.2, Qwen 2.5 / 3, Gemma 2 / 3, and speculative turbo decoding (up to 2× speedup).
+- **Zero-Dependency Document Processing**: Pure KMP file ingestion processing 25+ document formats (PDF, DOCX, XLSX, PPTX, CSV, Markdown) via RFC 1951 Deflate decompression without external binaries.
+- **System-Wide Intelligence & Privacy**: Android text selection integration (`ACTION_PROCESS_TEXT`), smart clipboard prompt pills, live Hugging Face Hub search, and 11 global languages (RTL ready) with zero cloud data transmission.
+
+<br>
+
 <p align="center">
   <a href="https://play.google.com/store/apps/details?id=com.deardhruv.openstore" target="_blank" rel="noopener noreferrer">
-    <img src="./assets/open-store-showcase.svg" width="100%" alt="Open Store - Lightweight Android TV launcher utility built with Compose for TV">
+    <img src="./assets/open-store-showcase.svg" width="100%" alt="Open Store: TV Apps & Launcher - Fast Android TV app launcher, favorites shelf, storage health dashboard & Play Store gateway">
   </a>
 </p>
+
+### 📺 [Open Store: TV Apps & Launcher](https://play.google.com/store/apps/details?id=com.deardhruv.openstore)
+*Fast, lightweight companion, smart app launcher, and storage health dashboard crafted exclusively for Android TV and Google TV (v1.0.7).*
+
+- **1-Click Google Play Store Gateway**: Instant 1-click shortcut to launch the official Google Play Store on Android TV and Google TV devices where the store is hidden or buried.
+- **Smart Launcher & Quick Favorites**: Dedicated Home Screen shelf pinning up to 6 favorite apps, plus a full My TV Apps Drawer featuring real-time D-pad search, 3-way smart sorting (A-Z, Recently Installed, Recently Updated), and bloatware app hiding.
+- **Storage Health & TV Settings**: Real-time internal storage monitor with color-coded capacity indicators, low-storage alerts, and direct intent shortcuts to Bluetooth remotes/accessories, network, and app management.
+- **10-Foot Living-Room Ergonomics**: 100% fluid D-pad navigation with deterministic focus routing, focus memory, smooth press scale damping (`0.98f`), adaptive low-RAM engine, and RTL-aware traversal.
+- **OLED Theming & Global Parity**: 10 OLED-optimized dark themes (Slate, Graphite, Midnight, Amber, etc.), 10 global languages with instant offline switching, 207 unit tests, zero ads, and 100% privacy.
 
 <p align="center">
   <img src="./assets/divider.svg" width="100%">

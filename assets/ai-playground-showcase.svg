@@ -96,8 +96,8 @@
     <text x="0" y="80" class="font-sans text-title">AI Playground</text>
     
     <!-- Description with generous line-height and comfortable margins -->
-    <text x="0" y="114" class="font-sans text-desc">Offline on-device LLM &amp; diffusion image synthesis for Android &amp; iOS.</text>
-    <text x="0" y="136" class="font-sans text-desc">Runs llama.cpp v0.7.0, LiteRT multi-graph &amp; Apple MLX Metal.</text>
+    <text x="0" y="114" class="font-sans text-desc">Offline on-device LLM chat &amp; diffusion synthesis on mobile.</text>
+    <text x="0" y="136" class="font-sans text-desc">llama.cpp v0.8.0 with Vulkan GPU, LiteRT-LM &amp; Apple MLX Metal.</text>
 
     <!-- Badges Row (Total width 443px, leaves 85px before x=528) -->
     <g transform="translate(0, 166)">
