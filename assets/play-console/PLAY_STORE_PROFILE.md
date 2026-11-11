@@ -70,9 +70,9 @@ Google Play Console allows you to add translations for your promotional text to 
 
 ### 2. Header Image (`4096 × 2304 px`, 16:9)
 - **Visual Story:** Showcases the DearDhruv brand and the three live Google Play apps:
-  1. **Veloci Hue:** KMP × Compose Multiplatform arcade game.
-  2. **AI Playground:** On-device neural LLM & diffusion image synthesis.
-  3. **Open Store:** Lightweight Android TV Leanback launcher.
+  1. **VelociHue:** Color Match Arcade (KMP × Compose Multiplatform arcade game with 2.2× Overdrive surge, zero-allocation 120 FPS engine & Android TV support).
+  2. **AI Playground:** Offline LLM AI (100% private on-device LLM chat & diffusion synthesis powered by llama.cpp v0.8.0, LiteRT-LM & Apple MLX Metal).
+  3. **Open Store:** TV Apps & Launcher (Fast Android TV app launcher, favorites shelf, real-time storage health dashboard & Play Store gateway).
 - **Safe Zone Alignment:**
   - **Lower 25% Safe Zone:** The lower portion contains atmospheric space and subtle baseline guides, preventing overlap from the circular developer icon and name overlaid by the Play Console UI.
   - **Upper 12% Safe Zone:** Leaves breathing room for system status bars and navigation affordances on mobile devices.
